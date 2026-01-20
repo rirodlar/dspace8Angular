@@ -60,9 +60,9 @@
   "browser": {
     "crypto": false,
     "fs": false,
-    "path": false,
     "http": false,
     "https": false,
+    "path": false,
     "stream": false,
     "url": false,
     "util": false,

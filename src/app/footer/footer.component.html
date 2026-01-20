@@ -1,5 +1,5 @@
 <footer class="text-lg-start">
-  <div *ngIf="showTopFooter" class="top-footer">
+  <div *ngIf="showTopFooter" class="top-footer d-none">
     <!-- Grid container -->
     <ds-text-section *ngIf="hasSiteFooterSections" [sectionId]="'site'" [textRowSection]=section [site]="(site | async)"></ds-text-section>
     <div *ngIf="!hasSiteFooterSections" class=" container p-4">
@@ -53,39 +53,52 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="bottom-footer p-1 d-flex justify-content-center align-items-center text-white">
-    <div class="content-container">
-      <p class="m-0">
-        {{ 'footer.built-with' | translate }}
-        <a class="text-white" href="https://wiki.lyrasis.org/display/DSPACECRIS/" role="link" tabindex="0">{{ 'footer.link.dspace-cris' | translate}}</a>
-        {{ 'footer.extension-by' | translate }}
-        <a class="text-white" href="https://www.4science.it/en/" role="link" tabindex="0">
-          <img src="assets/images/logo-4science-small.png" alt="{{ 'footer.link.4science' | translate}}" />
-        </a>
-      </p>
-      <ul class="footer-info list-unstyled d-flex justify-content-center mb-0">
-        <li *ngIf="showCookieSettings">
-          <button class="btn btn-link text-white" type="button" (click)="openCookieSettings()" role="button" tabindex="0">
-            {{ 'footer.link.cookies' | translate}}
-          </button>
-        </li>
-        <li>
-          <a class="btn text-white"
-             routerLink="info/accessibility" role="link" tabindex="0">{{ 'footer.link.accessibility' | translate }}</a>
-        </li>
-        <li *ngIf="showPrivacyPolicy">
-          <a class="btn text-white"
-             routerLink="info/privacy" role="link" tabindex="0">{{ 'footer.link.privacy-policy' | translate}}</a>
-        </li>
-        <li *ngIf="showEndUserAgreement">
-          <a class="btn text-white"
-             routerLink="info/end-user-agreement" role="link" tabindex="0">{{ 'footer.link.end-user-agreement' | translate}}</a>
-        </li>
-        <li *ngIf="showSendFeedback$ | async">
-          <a class="btn text-white"
-             routerLink="info/feedback" role="link" tabindex="0">{{ 'footer.link.feedback' | translate}}</a>
-        </li>
-      </ul>
+  <div class="bottom-footer d-flex justify-content-center align-items-center text-white">
+    <div class="container-fluid px-5">
+      <div class="row align-items-center">
+        <!-- Logo Izquierda -->
+        <div class="col-12 col-md-3 text-center text-md-start mb-3 mb-md-0">
+          <a href="https://www.usach.cl/" target="_blank">
+            <img src="assets/images/Usach_S1.png" alt="Logo USACH" style="max-height: 90px;">
+          </a>
+        </div>
+
+        <!-- Texto Central -->
+        <div class="col-12 col-md-6 text-center mb-3 mb-md-0">
+          <p class="m-0" style="font-size: 0.9rem; line-height: 1.4;" [innerHTML]="'footer.usach.address' | translate">
+          </p>
+          <ul class="footer-info list-unstyled d-flex justify-content-center mb-0 mt-2">
+            <li *ngIf="showCookieSettings">
+              <button class="btn btn-link text-white" type="button" (click)="openCookieSettings()" role="button" tabindex="0" style="padding: 0 0.5rem;">
+                {{ 'footer.link.cookies' | translate}}
+              </button>
+            </li>
+            <li>
+              <a class="btn text-white"
+                 routerLink="info/accessibility" role="link" tabindex="0" style="padding: 0 0.5rem;">{{ 'footer.link.accessibility' | translate }}</a>
+            </li>
+            <li *ngIf="showPrivacyPolicy">
+              <a class="btn text-white"
+                 routerLink="info/privacy" role="link" tabindex="0" style="padding: 0 0.5rem;">{{ 'footer.link.privacy-policy' | translate}}</a>
+            </li>
+            <li *ngIf="showEndUserAgreement">
+              <a class="btn text-white"
+                 routerLink="info/end-user-agreement" role="link" tabindex="0" style="padding: 0 0.5rem;">{{ 'footer.link.end-user-agreement' | translate}}</a>
+            </li>
+            <li *ngIf="showSendFeedback$ | async">
+              <a class="btn text-white"
+                 routerLink="info/feedback" role="link" tabindex="0" style="padding: 0 0.5rem;">{{ 'footer.link.feedback' | translate}}</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Logo Derecha -->
+        <div class="col-12 col-md-3 text-center text-md-end">
+          <a href="https://wiki.lyrasis.org/display/DSPACECRIS/" target="_blank">
+            <img src="https://sic.vriic.usach.cl/assets/images/dspace-cris-logo-hd.png" alt="Logo DSpace-CRIS" style="max-height: 100px;">
+          </a>
+        </div>
+      </div>
     </div>
     <div *ngIf="coarLdnEnabled$ | async" class="notify-enabled text-white">
       <a class="coar-notify-support-route" routerLink="info/coar-notify-support" role="link" tabindex="0">

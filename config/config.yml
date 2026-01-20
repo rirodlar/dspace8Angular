@@ -1,5 +1,5 @@
 rest:
   ssl: true
-  host: dspacecris7.4science.cloud
+  host: datosqa.usach.cl
   port: 443
   nameSpace: /server

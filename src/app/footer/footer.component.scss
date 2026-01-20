@@ -1,14 +1,19 @@
 :host {
   a {
-    font-weight: bold;
+    font-weight: normal;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   footer {
-    background-color: var(--ds-footer-bg);
+    background-color: #394049;
     text-align: center;
     z-index: var(--ds-footer-z-index);
-    border-top: var(--ds-footer-border);
-    padding: var(--ds-footer-padding);
+    border-top: none;
+    padding: 0;
 
     p {
       margin: 0;
@@ -23,9 +28,20 @@
       background-color: var(--ds-top-footer-bg);
       padding: var(--ds-footer-padding);
       margin: calc(var(--ds-footer-padding) * -1);
+
+      p a {
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
     }
 
     .bottom-footer {
+      padding: 1.5rem 0;
+
       .notify-enabled {
         position: absolute;
         bottom: 4px;
