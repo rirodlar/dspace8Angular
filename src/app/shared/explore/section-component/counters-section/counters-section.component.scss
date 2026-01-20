@@ -6,6 +6,11 @@
     &:hover {
         color: #{darken($gray-800, 20%)};
     }
+
+    i {
+        color: #ED7800;
+        font-size: 2rem;
+    }
 }
 
 .counters-label {

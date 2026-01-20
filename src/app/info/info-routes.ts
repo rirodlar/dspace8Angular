@@ -17,9 +17,11 @@ import {
   END_USER_AGREEMENT_PATH,
   FEEDBACK_PATH,
   PRIVACY_PATH,
+  SIC_PATH,
 } from './info-routing-paths';
 import { NotifyInfoComponent } from './notify-info/notify-info.component';
 import { ThemedPrivacyComponent } from './privacy/themed-privacy.component';
+import { SicComponent } from './sic/sic.component';
 
 
 export const ROUTES: Routes = [
@@ -29,6 +31,12 @@ export const ROUTES: Routes = [
     resolve: { breadcrumb: i18nBreadcrumbResolver },
     data: { title: 'info.feedback.title', breadcrumbKey: 'info.feedback' },
     canActivate: [feedbackGuard],
+  },
+  {
+    path: SIC_PATH,
+    component: SicComponent,
+    resolve: { breadcrumb: i18nBreadcrumbResolver },
+    data: { title: 'info.sic.title', breadcrumbKey: 'info.sic.breadcrumb' },
   },
   {
     path: ACCESSIBILITY_SETTINGS_PATH,

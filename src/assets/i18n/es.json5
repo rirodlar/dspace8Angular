@@ -4944,6 +4944,10 @@
 
   // "info.feedback.title": "Feedback",
   "info.feedback.title": "Sugerencias",
+  "info.sic.title": "¿Qué es SIC?",
+  "info.sic.head": "¿Que es Sic?",
+  "info.sic.content": "El Sistema de Información Científica SIC-USACH es una plataforma que tiene por objetivo integrar a toda la comunidad investigadora de la Universidad de Santiago de Chile para transparentar la información relacionada a proyectos de investigación. Entre la información se encuentra el perfil de la persona investigadora, la facultad a la que pertenece, la agencias patrocinante de su proyecto, colaboradores y los resultados de investigación relacionados al proyecto, entre ellas, publicaciones, protecciones, libros, datos de investigación y actividades de divulgación científica.",
+  "info.sic.breadcrumb": "¿Qué es SIC?",
 
   // "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
   "info.feedback.info": "Gracias por compartir sus sugerencias sobre el repositorio. ¡Tendremos en cuenta sus comentarios!",
@@ -7084,25 +7088,36 @@
   // "menu.section.browse_community_by_title": "By Title",
   "menu.section.browse_community_by_title": "Por titulo",
 
+  "menu.section.home": "Inicio",
+  "menu.section.collections": "Colecciones",
+  "menu.section.collection.datos_investigacion": "Datos de investigación",
+  "menu.section.collection.divulgacion_cientifica": "Divulgación Científica",
+  "menu.section.collection.personal_investigacion": "Personal de investigación",
+  "menu.section.collection.protecciones": "Protecciones",
+  "menu.section.collection.proyectos_externos": "Proyectos externos",
+  "menu.section.collection.proyectos_internos": "Proyectos internos",
+  "menu.section.collection.publicaciones": "Publicaciones",
+  "menu.section.collection.tesis": "Tesis",
   // "menu.section.explore_infrastructure": "Infrastructure",
   // TODO New key - Add a translation
   "menu.section.explore_infrastructure": "Infrastructure",
 
   // "menu.section.explore_publications": "Research Outputs",
   // TODO New key - Add a translation
-  "menu.section.explore_publications": "Research Outputs",
+  "menu.section.explore_publications": "Publicaciones",
 
   // "menu.section.explore_researchoutputs": "Research Outputs",
   // TODO New key - Add a translation
-  "menu.section.explore_researchoutputs": "Research Outputs",
+  "menu.section.explore_researchoutputs": "Publicaciones",
 
   // "menu.section.explore_researcherprofiles": "People",
   // TODO New key - Add a translation
-  "menu.section.explore_researcherprofiles": "People",
+  "menu.section.explore_researcherprofiles": "Personal de investigación",
 
   // "menu.section.explore_orgunits": "Organizations",
   // TODO New key - Add a translation
-  "menu.section.explore_orgunits": "Organizations",
+  "menu.section.explore_orgunits": "Unidad académica",
+  "menu.section.sic": "¿Qué es SIC?",
 
   // "menu.section.browse_global_by_srsc": "By Subject Category",
   "menu.section.browse_global_by_srsc": "Por categoría",

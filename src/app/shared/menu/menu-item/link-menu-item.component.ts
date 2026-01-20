@@ -1,4 +1,8 @@
-import { NgClass } from '@angular/common';
+import {
+  AsyncPipe,
+  NgClass,
+  NgIf,
+} from '@angular/common';
 import {
   Component,
   Inject,
@@ -21,7 +25,7 @@ import { LinkMenuItemModel } from './models/link.model';
   styleUrls: ['./menu-item.component.scss'],
   templateUrl: './link-menu-item.component.html',
   standalone: true,
-  imports: [NgClass, RouterLink, TranslateModule],
+  imports: [NgClass, NgIf, RouterLink, TranslateModule],
 })
 export class LinkMenuItemComponent implements OnInit {
   item: LinkMenuItemModel;

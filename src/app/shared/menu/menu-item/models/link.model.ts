@@ -11,5 +11,6 @@ export class LinkMenuItemModel implements MenuItemModel {
   disabled: boolean;
   text: string;
   link: string;
+  icon?: string;
   queryParams?: Params | null;
 }

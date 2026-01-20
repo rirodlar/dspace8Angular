@@ -118,73 +118,127 @@ export class MenuResolverService  {
   createPublicMenu$(): Observable<boolean> {
     const menuList: any[] = [];
 
-    /* Communities & Collections tree */
-    const CommunityCollectionMenuItem = {
-      id: `browse_global_communities_and_collections`,
+    /* Home */
+    menuList.push({
+      id: `home`,
       active: false,
-      visible: environment.layout.navbar.showCommunityCollection,
+      visible: true,
       index: 0,
+      icon: 'home',
       model: {
         type: MenuItemType.LINK,
-        text: `menu.section.communities_and_collections`,
-        link: `/community-list`,
+        text: `menu.section.home`,
+        link: `/home`,
+        disabled: false,
+        icon: 'fa-home',
       } as LinkMenuItemModel,
-    };
-
-    if (environment.layout.navbar.showCommunityCollection) {
-      menuList.push(CommunityCollectionMenuItem);
-    }
-
-    // Read the different Browse-By types from config and add them to the browse menu
-    this.sectionDataService.findVisibleSections().pipe(
-      getFirstCompletedRemoteData(),
-    ).subscribe( (sectionDefListRD: RemoteData<PaginatedList<Section>>) => {
-      if (sectionDefListRD.hasSucceeded) {
-        sectionDefListRD.payload.page.forEach((section) => {
-          let parentMenu: any = {
-            id: `explore_${section.id}`,
-            active: false,
-            visible: true,
-          };
-          if (section.nestedSections && section.nestedSections.length) {
-            section.nestedSections.forEach((nested) => {
-              menuList.push({
-                id: `explore_nested_${nested.id}`,
-                parentID: `explore_${section.id}`,
-                active: false,
-                visible: true,
-                model: {
-                  type: MenuItemType.LINK,
-                  text: `menu.section.explore_${nested.id}`,
-                  link: `/explore/${nested.id}`,
-                } as LinkMenuItemModel,
-              });
-            });
-            parentMenu = {
-              ...parentMenu,
-              index: 1,
-              model: {
-                type: MenuItemType.TEXT,
-                text: `menu.section.explore_${section.id}`,
-              } as TextMenuItemModel,
-            };
-          } else {
-            parentMenu = {
-              ...parentMenu,
-              model: {
-                type: MenuItemType.LINK,
-                text: `menu.section.explore_${section.id}`,
-                link: `/explore/${section.id}`,
-              } as LinkMenuItemModel,
-            };
-          }
-          menuList.push(parentMenu);
-        });
-      }
-      menuList.forEach((menuSection) => this.menuService.addSection(MenuID.PUBLIC, Object.assign(menuSection, {
-        shouldPersistOnRouteChange: true,
-      })));
     });
+
+    /* Personal de Investigación */
+    menuList.push({
+      id: `explore_researcherprofiles`,
+      active: false,
+      visible: true,
+      index: 1,
+      model: {
+        type: MenuItemType.LINK,
+        text: `menu.section.explore_researcherprofiles`,
+        link: `/explore/researcherprofiles`,
+        disabled: false,
+        icon: 'fa-user',
+      } as LinkMenuItemModel,
+    });
+
+    /* Unidad Académica */
+    menuList.push({
+      id: `explore_orgunits`,
+      active: false,
+      visible: true,
+      index: 2,
+      model: {
+        type: MenuItemType.LINK,
+        text: `menu.section.explore_orgunits`,
+        link: `/explore/orgunits`,
+        disabled: false,
+        icon: 'fa-university',
+      } as LinkMenuItemModel,
+    });
+
+    /* Publicaciones */
+    menuList.push({
+      id: `explore_publications`,
+      active: false,
+      visible: true,
+      index: 3,
+      model: {
+        type: MenuItemType.LINK,
+        text: `menu.section.explore_publications`,
+        link: `/explore/publications`,
+        disabled: false,
+        icon: 'fa-book',
+      } as LinkMenuItemModel,
+    });
+
+    /* ¿Qué es SIC? */
+    menuList.push({
+      id: `sic`,
+      active: false,
+      visible: true,
+      index: 4,
+      model: {
+        type: MenuItemType.LINK,
+        text: `menu.section.sic`,
+        link: `/info/sic`,
+        disabled: false,
+        icon: 'fa-info-circle',
+      } as LinkMenuItemModel,
+    });
+
+    /* Colecciones (Dropdown) */
+    menuList.push({
+      id: `collections_parent`,
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.TEXT,
+        text: `menu.section.collections`,
+        disabled: false,
+        icon: 'fa-layer-group',
+      } as TextMenuItemModel,
+    });
+
+    /* Sub-items for Colecciones */
+    const collectionSubItems = [
+      { id: 'research_data', text: 'datos_investigacion', link: '/explore/datasets' },
+      { id: 'scientific_dissemination', text: 'divulgacion_cientifica', link: '/explore/dissemination' },
+      { id: 'research_staff', text: 'personal_investigacion', link: '/explore/researcherprofiles' },
+      { id: 'protections', text: 'protecciones', link: '/explore/protections' },
+      { id: 'external_projects', text: 'proyectos_externos', link: '/explore/externalprojects' },
+      { id: 'internal_projects', text: 'proyectos_internos', link: '/explore/internalprojects' },
+      { id: 'publications_sub', text: 'publicaciones', link: '/explore/publications' },
+      { id: 'thesis', text: 'tesis', link: '/explore/thesis' },
+    ];
+
+    collectionSubItems.forEach((item, index) => {
+      menuList.push({
+        id: `collection_sub_${item.id}`,
+        parentID: `collections_parent`,
+        active: false,
+        visible: true,
+        index: index,
+        model: {
+          type: MenuItemType.LINK,
+          text: `menu.section.collection.${item.text}`,
+          link: item.link,
+          disabled: false,
+        } as LinkMenuItemModel,
+      });
+    });
+
+    menuList.forEach((menuSection) => this.menuService.addSection(MenuID.PUBLIC, Object.assign(menuSection, {
+      shouldPersistOnRouteChange: true,
+    })));
 
     this.createStatisticsMenu();
     return this.waitForMenu$(MenuID.PUBLIC);
@@ -209,6 +263,7 @@ export class MenuResolverService  {
               type: MenuItemType.LINK,
               text: 'menu.section.statistics.site',
               link: '/statistics',
+              disabled: false,
             } as LinkMenuItemModel,
           });
         }
@@ -223,6 +278,7 @@ export class MenuResolverService  {
               type: MenuItemType.LINK,
               text: 'menu.section.statistics.login',
               link: '/statistics/login',
+              disabled: false,
             } as LinkMenuItemModel,
           });
         }
@@ -237,6 +293,7 @@ export class MenuResolverService  {
               type: MenuItemType.LINK,
               text: 'menu.section.statistics.workflow',
               link: '/statistics/workflow',
+              disabled: false,
             } as LinkMenuItemModel,
           });
         }
@@ -247,10 +304,11 @@ export class MenuResolverService  {
             id: 'statistics',
             active: false,
             visible: true,
-            index: 1,
+            index: 6,
             model: {
               type: MenuItemType.TEXT,
               text: 'menu.section.statistics',
+              disabled: false,
             } as TextMenuItemModel,
           },
         );

@@ -1,3 +1,4 @@
+import { NgIf } from '@angular/common';
 import {
   Component,
   Inject,
@@ -14,7 +15,7 @@ import { TextMenuItemModel } from './models/text.model';
   styleUrls: ['./menu-item.component.scss'],
   templateUrl: './text-menu-item.component.html',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [NgIf, TranslateModule],
 })
 export class TextMenuItemComponent {
   item: TextMenuItemModel;

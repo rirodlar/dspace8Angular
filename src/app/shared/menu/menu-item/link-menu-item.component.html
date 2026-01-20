@@ -9,4 +9,4 @@
    (keydown.enter)="navigate($event)"
    href="javascript:void(0);"
    tabindex="0"
->{{item.text | translate}}</a>
+><i *ngIf="item.icon" [class]="item.icon" class="fas fa-fw mr-1"></i>{{item.text | translate}}</a>
