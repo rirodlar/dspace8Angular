@@ -21,7 +21,14 @@
             <ng-container *ngFor="let mdEntry of (metadata$ | async) | keyvalue">
               <tr *ngFor="let mdValue of mdEntry.value | slice:0:(metadataMapLimit$ | async).get(mdEntry.key)">
                 <td>{{mdEntry.key}}</td>
-                <td>{{mdValue.value}}</td>
+                <td>
+                  <ng-container *ngIf="isUrl(mdValue.value); else noUrl">
+                    <a [href]="mdValue.value" target="_blank">{{mdValue.value}}</a>
+                  </ng-container>
+                  <ng-template #noUrl>
+                    {{mdValue.value}}
+                  </ng-template>
+                </td>
                 <td>{{mdValue.language}}</td>
               </tr>
               <tr *ngIf="mdEntry.value.length > (metadataMapLimit$ | async).get(mdEntry.key)">

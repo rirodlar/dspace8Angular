@@ -45,7 +45,10 @@ import { MetadataMap } from '../../core/shared/metadata.models';
 import { fadeInOut } from '../../shared/animations/fade';
 import { ContextMenuComponent } from '../../shared/context-menu/context-menu.component';
 import { DsoEditMenuComponent } from '../../shared/dso-page/dso-edit-menu/dso-edit-menu.component';
-import { hasValue } from '../../shared/empty.util';
+import {
+  hasNoValue,
+  hasValue,
+} from '../../shared/empty.util';
 import { ErrorComponent } from '../../shared/error/error.component';
 import { ThemedLoadingComponent } from '../../shared/loading/themed-loading.component';
 import { VarDirective } from '../../shared/utils/var.directive';
@@ -160,6 +163,18 @@ export class FullItemPageComponent extends ItemPageComponent implements OnInit, 
     const metadataMapLimit: Map<string, number> = new Map(this.metadataMapLimit$.value);
     Object.keys(metadataMap).forEach((key: string) => metadataMapLimit.set(key, this.limitSize));
     this.metadataMapLimit$.next(metadataMapLimit);
+  }
+
+  /**
+   * Returns true if the given value is a URL.
+   * @param value The value to check
+   */
+  public isUrl(value: string): boolean {
+    if (hasNoValue(value)) {
+      return false;
+    }
+    const urlPattern = /^(https?:\/\/|www\.)\S+$/i;
+    return urlPattern.test(value);
   }
 
 }

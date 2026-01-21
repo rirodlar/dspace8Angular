@@ -400,4 +400,29 @@ describe('FullItemPageComponent', () => {
       expect(btn).not.toBeNull();
     });
   });
+
+  describe('isUrl', () => {
+    it('should return true for http URLs', () => {
+      expect(comp.isUrl('http://google.com')).toBeTrue();
+    });
+
+    it('should return true for https URLs', () => {
+      expect(comp.isUrl('https://google.com')).toBeTrue();
+    });
+
+    it('should return true for www URLs', () => {
+      expect(comp.isUrl('www.google.com')).toBeTrue();
+    });
+
+    it('should return false for non-URLs', () => {
+      expect(comp.isUrl('not a url')).toBeFalse();
+      expect(comp.isUrl('google.com')).toBeFalse();
+    });
+
+    it('should return false for empty values', () => {
+      expect(comp.isUrl('')).toBeFalse();
+      expect(comp.isUrl(null)).toBeFalse();
+      expect(comp.isUrl(undefined)).toBeFalse();
+    });
+  });
 });
