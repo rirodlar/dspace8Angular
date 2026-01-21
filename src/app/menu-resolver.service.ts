@@ -158,7 +158,7 @@ export class MenuResolverService  {
       model: {
         type: MenuItemType.LINK,
         text: `menu.section.explore_orgunits`,
-        link: `/explore/orgunits`,
+        link: `/handle/123456789/43`,
         disabled: false,
         icon: 'fa-university',
       } as LinkMenuItemModel,
@@ -173,7 +173,7 @@ export class MenuResolverService  {
       model: {
         type: MenuItemType.LINK,
         text: `menu.section.explore_publications`,
-        link: `/explore/publications`,
+        link: `/handle/123456789/8`,
         disabled: false,
         icon: 'fa-book',
       } as LinkMenuItemModel,
@@ -210,14 +210,14 @@ export class MenuResolverService  {
 
     /* Sub-items for Colecciones */
     const collectionSubItems = [
-      { id: 'research_data', text: 'datos_investigacion', link: '/explore/datasets' },
-      { id: 'scientific_dissemination', text: 'divulgacion_cientifica', link: '/explore/dissemination' },
-      { id: 'research_staff', text: 'personal_investigacion', link: '/explore/researcherprofiles' },
-      { id: 'protections', text: 'protecciones', link: '/explore/protections' },
-      { id: 'external_projects', text: 'proyectos_externos', link: '/explore/externalprojects' },
-      { id: 'internal_projects', text: 'proyectos_internos', link: '/explore/internalprojects' },
-      { id: 'publications_sub', text: 'publicaciones', link: '/explore/publications' },
-      { id: 'thesis', text: 'tesis', link: '/explore/thesis' },
+      { id: 'research_data', text: 'datos_investigacion', link: '/handle/123456789/66' },
+      { id: 'scientific_dissemination', text: 'divulgacion_cientifica', link: '/handle/123456789/51' },
+      { id: 'research_staff', text: 'personal_investigacion', link: '/handle/123456789/3' },
+      { id: 'protections', text: 'protecciones', link: '/handle/123456789/9' },
+      { id: 'external_projects', text: 'proyectos_externos', link: '/handle/123456789/56' },
+      { id: 'internal_projects', text: 'proyectos_internos', link: '/handle/123456789/58' },
+      { id: 'publications_sub', text: 'publicaciones', link: '/handle/123456789/8' },
+      { id: 'thesis', text: 'tesis', link: '/handle/123456789/69' },
     ];
 
     collectionSubItems.forEach((item, index) => {

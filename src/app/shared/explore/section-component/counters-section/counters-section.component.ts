@@ -17,8 +17,8 @@ import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import {
   BehaviorSubject,
-  forkJoin,
   Observable,
+  of,
 } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { InternalLinkService } from 'src/app/core/services/internal-link.service';
@@ -58,6 +58,7 @@ export class CountersSectionComponent implements OnInit {
 
   counterData: CounterData[] = [];
   counterData$: Observable<CounterData[]>;
+  counterData2$: Observable<CounterData[]>;
   isLoading$ = new BehaviorSubject(true);
 
   pagination: PaginationComponentOptions;
@@ -72,34 +73,48 @@ export class CountersSectionComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (isPlatformServer(this.platformId)) {
-      return;
-    }
+    this.counterData$ = of([
+      {
+        count: '0',
+        label: 'rprofiles',
+        icon: 'fas fa-users fa-3x',
+        link: '/search?configuration=person',
+      },
+      {
+        count: '0',
+        label: 'project_funding',
+        icon: 'fas fa-cog fa-3x',
+        link: '/search?configuration=project_funding',
+      },
+      {
+        count: '0',
+        label: 'publications',
+        icon: 'fas fa-university fa-3x',
+        link: '/search?configuration=researchoutputs',
+      },
+    ]);
 
-    this.pagination  = Object.assign(new PaginationComponentOptions(), {
-      id: 'counters-pagination' + this.sectionId,
-      pageSize: 1,
-      currentPage: 1,
-    });
-
-    this.counterData$ = forkJoin(
-      this.countersSection.counterSettingsList.map((counterSettings: CountersSettings) =>
-        this.searchService.search(new PaginatedSearchOptions({
-          configuration: counterSettings.discoveryConfigurationName,
-          pagination: this.pagination })).pipe(
-          getFirstSucceededRemoteDataPayload(),
-          map((rs: SearchObjects<DSpaceObject>) => rs.totalElements),
-          map((total: number) => {
-            return {
-              count: total.toString(),
-              label: counterSettings.entityName,
-              icon: counterSettings.icon,
-              link: counterSettings.link,
-
-            };
-          }),
-        )));
-    this.counterData$.subscribe(() => this.isLoading$.next(false));
+    this.counterData2$ = of([
+      {
+        count: '0',
+        label: 'publications-alt',
+        icon: 'fas fa-file-alt fa-3x',
+        link: '/handle/123456789/8',
+      },
+      {
+        count: '0',
+        label: 'research-data',
+        icon: 'fas fa-database fa-3x',
+        link: '/handle/123456789/66',
+      },
+      {
+        count: '0',
+        label: 'scientific-outreach',
+        icon: 'fas fa-bullhorn fa-3x',
+        link: '/handle/123456789/51',
+      },
+    ]);
+    this.isLoading$.next(false);
   }
 }
 

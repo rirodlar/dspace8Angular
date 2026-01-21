@@ -42,6 +42,14 @@
   }
 
   #main-navbar ::ng-deep {
+    .development-version-label {
+      color: #ED7800; // Naranja USACH usado anteriormente
+      font-weight: bold;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
+
     .ds-menu-item, .ds-menu-toggler-wrapper {
       white-space: nowrap;
       text-decoration: none;

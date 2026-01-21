@@ -3966,17 +3966,21 @@
   // TODO New key - Add a translation
   "explore.browse-section.title": "Browse",
 
-  // "explore.counters-section.rprofiles": "People",
+  // "explore.counters-section.rprofiles": "Personal de investigación",
   // TODO New key - Add a translation
-  "explore.counters-section.rprofiles": "People",
+  "explore.counters-section.rprofiles": "Personal de investigación",
 
-  // "explore.counters-section.publications": "Research outputs",
+  // "explore.counters-section.publications": "Unidades Académicas",
   // TODO New key - Add a translation
-  "explore.counters-section.publications": "Research outputs",
+  "explore.counters-section.publications": "Unidades Académicas",
 
-  // "explore.counters-section.project_funding": "Projects",
+  // "explore.counters-section.project_funding": "Proyectos",
   // TODO New key - Add a translation
-  "explore.counters-section.project_funding": "Projects",
+  "explore.counters-section.project_funding": "Proyectos",
+
+  "explore.counters-section.publications-alt": "Publicaciones",
+  "explore.counters-section.research-data": "Datos de Investigación",
+  "explore.counters-section.scientific-outreach": "Divulgación Cientifica",
 
   // "explore.facet-section.title": "Discover",
   // TODO New key - Add a translation
@@ -7089,6 +7093,7 @@
   "menu.section.browse_community_by_title": "Por titulo",
 
   "menu.section.home": "Inicio",
+  "menu.section.development_version": "versión en desarrollo",
   "menu.section.collections": "Colecciones",
   "menu.section.collection.datos_investigacion": "Datos de investigación",
   "menu.section.collection.divulgacion_cientifica": "Divulgación Científica",

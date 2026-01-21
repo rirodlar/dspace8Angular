@@ -10,6 +10,9 @@
           <ds-user-menu [inExpandableNavbar]="true"></ds-user-menu>
         </ng-container>
         <div class="navbar-nav align-items-md-center mr-auto shadow-none gapx-3" role="menubar">
+          <span class="navbar-text development-version-label mr-3">
+            {{ 'menu.section.development_version' | translate }}
+          </span>
           <ng-container *ngFor="let section of (sections | async)">
             <ng-container
               *ngComponentOutlet="(sectionMap$ | async).get(section.id)?.component; injector: (sectionMap$ | async).get(section.id)?.injector;"></ng-container>
