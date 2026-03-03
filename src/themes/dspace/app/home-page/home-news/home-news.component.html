@@ -1,6 +1,7 @@
-<div class="home-news-container mt-ncs">
+<div class="home-news-container mt-ncs" style="background-color: #BFE5E5 !important; border-bottom: 2px #ec7803 solid">
   <div class="container">
-    <div class="jumbotron jumbotron-fluid">
+
+    <div class="jumbotron jumbotron-fluid"  style="padding:1px;padding-top:12px;">
       <ds-text-section *ngIf="hasHomeNewsMetadata; else dsDefaultHomeNews" [sectionId]="'site'" [textRowSection]="homeNewsSection"
                               [site]="(site$ | async)"></ds-text-section>
     </div>
@@ -10,7 +11,7 @@
 <ng-template #dsDefaultHomeNews>
   <div class="d-flex flex-wrap">
     <div>
-      <h1 class="display-6"> El Sistema de Información Científica USACH se encuentra en proceso de mejora continua. Algunas secciones pueden presentar cambios o estar en construcción.
+      <h1 class="display-5" style="color: #009a96; font-weight: 600;"> El Sistema de Información Científica USACH se encuentra en proceso de mejora continua. Algunas secciones pueden presentar cambios o estar en construcción.
       </h1>
     </div>
   </div>

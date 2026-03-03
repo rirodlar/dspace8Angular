@@ -157,6 +157,11 @@ ngb-modal-backdrop {
     width: 100%;
 }
 
+.card-header {
+    color: #00a499;
+    font-weight: 900;
+}
+
 .custom-accordion .card:first-of-type {
     border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color) !important;
     border-bottom-left-radius: var(--bs-card-border-radius) !important;

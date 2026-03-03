@@ -119,6 +119,7 @@ export class MenuResolverService  {
     const menuList: any[] = [];
 
     /* Home */
+    /*
     menuList.push({
       id: `home`,
       active: false,
@@ -133,58 +134,14 @@ export class MenuResolverService  {
         icon: 'fa-home',
       } as LinkMenuItemModel,
     });
-
-    /* Personal de Investigación */
-    menuList.push({
-      id: `explore_researcherprofiles`,
-      active: false,
-      visible: true,
-      index: 1,
-      model: {
-        type: MenuItemType.LINK,
-        text: `menu.section.explore_researcherprofiles`,
-        link: `/explore/researcherprofiles`,
-        disabled: false,
-        icon: 'fa-user',
-      } as LinkMenuItemModel,
-    });
-
-    /* Unidad Académica */
-    menuList.push({
-      id: `explore_orgunits`,
-      active: false,
-      visible: true,
-      index: 2,
-      model: {
-        type: MenuItemType.LINK,
-        text: `menu.section.explore_orgunits`,
-        link: `/handle/123456789/43`,
-        disabled: false,
-        icon: 'fa-university',
-      } as LinkMenuItemModel,
-    });
-
-    /* Publicaciones */
-    menuList.push({
-      id: `explore_publications`,
-      active: false,
-      visible: true,
-      index: 3,
-      model: {
-        type: MenuItemType.LINK,
-        text: `menu.section.explore_publications`,
-        link: `/handle/123456789/8`,
-        disabled: false,
-        icon: 'fa-book',
-      } as LinkMenuItemModel,
-    });
+    */
 
     /* ¿Qué es SIC? */
     menuList.push({
       id: `sic`,
       active: false,
       visible: true,
-      index: 4,
+      index: 0,
       model: {
         type: MenuItemType.LINK,
         text: `menu.section.sic`,
@@ -194,7 +151,38 @@ export class MenuResolverService  {
       } as LinkMenuItemModel,
     });
 
+    /* Estadísticas */
+    menuList.push({
+      id: `statistics_link`,
+      active: false,
+      visible: true,
+      index: 1,
+      model: {
+        type: MenuItemType.LINK,
+        text: `menu.section.statistics`,
+        link: `/statistics`,
+        disabled: false,
+        icon: 'fa-chart-bar',
+      } as LinkMenuItemModel,
+    });
+
+    /* Guía de Usuario */
+    menuList.push({
+      id: `user_guide`,
+      active: false,
+      visible: true,
+      index: 2,
+      model: {
+        type: MenuItemType.LINK,
+        text: `menu.section.user_guide`,
+        link: `/info/user-guide`,
+        disabled: false,
+        icon: 'fa-book-open',
+      } as LinkMenuItemModel,
+    });
+
     /* Colecciones (Dropdown) */
+    /*
     menuList.push({
       id: `collections_parent`,
       active: false,
@@ -207,8 +195,10 @@ export class MenuResolverService  {
         icon: 'fa-layer-group',
       } as TextMenuItemModel,
     });
+    */
 
     /* Sub-items for Colecciones */
+    /*
     const collectionSubItems = [
       { id: 'research_data', text: 'datos_investigacion', link: '/handle/123456789/66' },
       { id: 'scientific_dissemination', text: 'divulgacion_cientifica', link: '/handle/123456789/51' },
@@ -235,6 +225,7 @@ export class MenuResolverService  {
         } as LinkMenuItemModel,
       });
     });
+    */
 
     menuList.forEach((menuSection) => this.menuService.addSection(MenuID.PUBLIC, Object.assign(menuSection, {
       shouldPersistOnRouteChange: true,

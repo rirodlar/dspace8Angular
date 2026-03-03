@@ -1,14 +1,17 @@
 <header id="main-site-header">
-  <div class="container-fluid px-md-5 px-4 h-100 d-flex flex-row align-items-center justify-content-between gapx-3 gapy-2" id="main-site-header-container">
+  <div class="container px-md-5 px-4 h-100 d-flex flex-row align-items-center justify-content-between gapx-3 gapy-2" id="main-site-header-container">
     <!-- Logo and navbar wrapper -->
     <div id="header-left"
          [attr.role]="(isMobile$ | async) ? 'navigation' : 'presentation'"
          [attr.aria-label]="(isMobile$ | async) ? ('nav.main.description' | translate) : null"
          class="h-100 flex-fill d-flex flex-row flex-nowrap justify-content-start align-items-center gapx-3 flex-grow-1">
       <a class="d-block my-2 my-md-0" routerLink="/home" [attr.aria-label]="'home.title' | translate" role="button" tabindex="0">
-        <img id="header-logo" src="assets/images/Usach_S1.png" style="height: 70px;" [attr.alt]="'menu.header.image.logo' | translate"/>
+        <img id="header-logo" src="assets/images/Usach_S1.png" style="height: 90px;" [attr.alt]="'menu.header.image.logo' | translate"/>
       </a>
       <nav *ngIf="(isMobile$ | async) !== true" class="navbar navbar-expand p-0 align-items-stretch align-self-stretch flex-grow-1 flex-shrink-1" id="desktop-navbar" [attr.aria-label]="'nav.main.description' | translate">
+<!--        <div class="d-flex align-items-center mr-2 text-primary font-weight-bold">-->
+<!--          [ Versión en desarrollo ]-->
+<!--        </div>-->
         <ds-navbar></ds-navbar>
       </nav>
     </div>
@@ -31,4 +34,31 @@
 
     </div>
   </div>
+
+  <!-- New centered menu below the other menu -->
+  <div id="header-bottom" class="w-100" style="background-color: #00A499;" *ngIf="(isMobile$ | async) !== true">
+    <div class="container px-md-5 px-4 d-flex flex-row justify-content-center py-2">
+      <ul class="nav">
+        <li *ngFor="let item of menuItems" class="nav-item" [ngClass]="{'dropdown': item.subMenu}">
+          <ng-container *ngIf="!item.subMenu">
+            <a class="nav-link text-white font-weight-bold" [routerLink]="item.link">
+              <i *ngIf="item.icon" [class]="item.icon + ' mr-1'"></i> {{item.label}}
+            </a>
+          </ng-container>
+          <ng-container *ngIf="item.subMenu">
+            <a class="nav-link text-white font-weight-bold dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i *ngIf="item.icon" [class]="item.icon + ' mr-1'"></i> {{item.label}}
+            </a>
+            <div class="dropdown-menu">
+              <a *ngFor="let subItem of item.subMenu" class="dropdown-item" [routerLink]="subItem.link">
+                <i *ngIf="subItem.icon" [class]="subItem.icon + ' mr-1'"></i> {{subItem.label}}
+              </a>
+            </div>
+          </ng-container>
+        </li>
+      </ul>
+    </div>
+  </div>
+
 </header>
+

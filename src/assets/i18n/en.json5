@@ -3015,6 +3015,14 @@
   "info.feedback.head": "Feedback",
 
   "info.feedback.title": "Feedback",
+  "info.sic.title": "What is SIC?",
+  "info.sic.head": "What is SIC?",
+  "info.sic.content": "The Scientific Information System SIC-USACH is a platform that aims to integrate the entire research community of the University of Santiago de Chile to make information related to research projects transparent.",
+  "info.sic.breadcrumb": "What is SIC?",
+  "info.user-guide.title": "User Guide",
+  "info.user-guide.head": "User Guide",
+  "info.user-guide.content": "Welcome to the Scientific Information System User Guide. Here you will find instructions on how to use the platform.",
+  "info.user-guide.breadcrumb": "User Guide",
 
   "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
 
@@ -4508,6 +4516,7 @@
   "menu.section.registries_metadata": "Metadata",
 
   "menu.section.statistics": "Statistics",
+  "menu.section.user_guide": "User Guide",
 
   "menu.section.statistics.workflow": "Workflow",
 

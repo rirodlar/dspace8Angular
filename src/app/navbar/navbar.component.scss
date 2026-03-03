@@ -19,7 +19,6 @@
       &.open {
         height: auto;
         min-height: 100vh; //doesn't matter because wrapper is sticky
-        border-bottom: 1px var(--ds-header-navbar-border-bottom-color) solid; // open navbar covers header-navbar-wrapper border
       }
     }
   }

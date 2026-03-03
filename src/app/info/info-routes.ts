@@ -18,10 +18,12 @@ import {
   FEEDBACK_PATH,
   PRIVACY_PATH,
   SIC_PATH,
+  USER_GUIDE_PATH,
 } from './info-routing-paths';
 import { NotifyInfoComponent } from './notify-info/notify-info.component';
 import { ThemedPrivacyComponent } from './privacy/themed-privacy.component';
 import { SicComponent } from './sic/sic.component';
+import { UserGuideComponent } from './user-guide/user-guide.component';
 
 
 export const ROUTES: Routes = [
@@ -37,6 +39,12 @@ export const ROUTES: Routes = [
     component: SicComponent,
     resolve: { breadcrumb: i18nBreadcrumbResolver },
     data: { title: 'info.sic.title', breadcrumbKey: 'info.sic.breadcrumb' },
+  },
+  {
+    path: USER_GUIDE_PATH,
+    component: UserGuideComponent,
+    resolve: { breadcrumb: i18nBreadcrumbResolver },
+    data: { title: 'info.user-guide.title', breadcrumbKey: 'info.user-guide.breadcrumb' },
   },
   {
     path: ACCESSIBILITY_SETTINGS_PATH,
