@@ -114,8 +114,9 @@ export class ComcolPageBrowseByComponent implements OnDestroy, OnInit {
         if (configProperty) {
           options = [...options, ...configProperty.values.map((configValue: string) => ({
             id: configValue,
-            label: `browse.comcol.by.${configValue}`,
-            routerLink: `${comColRoute}/browse/${configValue}`,
+            // Solucion provisoria "parche" para cambiar 'type' a 'rights'
+            label: `browse.comcol.by.${configValue === 'type' ? 'rights' : configValue}`,
+            routerLink: `${comColRoute}/browse/${configValue === 'type' ? 'rights' : configValue}`,
           }))];
         }
         // When the default tab is not the "search" tab, the "search" tab is moved

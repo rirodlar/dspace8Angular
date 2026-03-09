@@ -1933,6 +1933,7 @@
   // "browse.comcol.by.type": "By Type",
   // TODO New key - Add a translation
   "browse.comcol.by.type": "By Type",
+  "browse.comcol.by.rights": "Por derechos",
 
 
   // "browse.comcol.head": "Browse",
