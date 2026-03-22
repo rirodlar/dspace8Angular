@@ -88,6 +88,30 @@ describe('TextComponent', () => {
     done();
   });
 
+  it('should render a link if metadata value is HTML', (done) => {
+    component.metadataValue.value = '<a href="http://example.com">Link</a>';
+    component.ngOnInit();
+    fixture.detectChanges();
+
+    const linkFound = fixture.debugElement.query(By.css('a'));
+    expect(linkFound).toBeTruthy();
+    expect(linkFound.nativeElement.textContent).toContain(component.metadataValue.value);
+    expect(linkFound.nativeElement.getAttribute('href')).toBe('<a href="http://example.com">Link</a>');
+    done();
+  });
+
+  it('should render a link if metadata value is a URL', (done) => {
+    component.metadataValue.value = 'https://doi.org/10.1016/j.ijrmms.2010.11.018';
+    component.ngOnInit();
+    fixture.detectChanges();
+
+    const linkFound = fixture.debugElement.query(By.css('a'));
+    expect(linkFound).toBeTruthy();
+    expect(linkFound.nativeElement.textContent).toContain('https://doi.org/10.1016/j.ijrmms.2010.11.018');
+    expect(linkFound.nativeElement.getAttribute('href')).toBe('https://doi.org/10.1016/j.ijrmms.2010.11.018');
+    done();
+  });
+
   it('check value style', (done) => {
     const spanValueFound = fixture.debugElement.queryAll(By.css('.test-style-value'));
     expect(spanValueFound.length).toBe(1);

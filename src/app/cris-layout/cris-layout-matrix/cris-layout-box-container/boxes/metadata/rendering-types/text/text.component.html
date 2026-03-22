@@ -1,4 +1,6 @@
 <div [class]="field.styleValue">
-  <span *ngIf="!isUrl(metadataValue.value)" class="text-value" [innerHTML]="formatText(metadataValue.value)"></span>
-  <a *ngIf="isUrl(metadataValue.value)" href="{{ metadataValue.value}}">{{ metadataValue.value}}</a>
+    <span *ngIf="!isHtml && !isLink" class="text-value" [innerHTML]="formatText(metadataValue.value)"></span>
+    <span *ngIf="isHtml || isLink" class="text-value">
+        <a href="{{metadataValue.value}}" target="_blank">{{metadataValue.value}}</a>
+    </span>
 </div>
