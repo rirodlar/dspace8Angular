@@ -109,7 +109,7 @@ export class HeaderComponent extends BaseComponent implements OnInit {
         },
         {
           label: 'Tesis',
-          link: '/handle/123456789/69',
+          link: '/handle/123456789/17290',
           icon: 'fas fa-graduation-cap',
         },
       ],
