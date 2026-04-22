@@ -89,6 +89,12 @@ export const APP_ROUTES: Route[] = [
         canActivate: [endUserAgreementCurrentUserGuard],
       },
       {
+        path: 'comunidades',
+        loadChildren: () => import('./community-list-page/community-list-page-routes')
+          .then((m) => m.ROUTES),
+        canActivate: [endUserAgreementCurrentUserGuard],
+      },
+      {
         path: 'id',
         loadChildren: () => import('./lookup-by-id/lookup-by-id-routes')
           .then((m) => m.ROUTES),
