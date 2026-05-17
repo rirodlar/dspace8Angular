@@ -60,12 +60,12 @@ export class HeaderComponent extends BaseComponent implements OnInit {
     },
     {
       label: 'Unidad Académica',
-      link: '/handle/123456789/43',
+      link: '/handle/usach/43',
       icon: 'fas fa-university',
     },
     {
       label: 'Publicaciones',
-      link: '/handle/123456789/8',
+      link: '/handle/usach/8',
       icon: 'fas fa-book',
     },
     {
@@ -74,42 +74,42 @@ export class HeaderComponent extends BaseComponent implements OnInit {
       subMenu: [
         {
           label: 'Datos de Investigacion',
-          link: '/handle/123456789/66',
+          link: '/handle/usach/66',
           icon: 'fas fa-database',
         },
         {
           label: 'Divulgacion cientifica',
-          link: '/handle/123456789/51',
+          link: '/handle/usach/51',
           icon: 'fas fa-bullhorn',
         },
         {
           label: 'Personal de Investigacion',
-          link: '/handle/123456789/3',
+          link: '/handle/usach/3',
           icon: 'fas fa-users',
         },
         {
           label: 'Protecciones',
-          link: '/handle/123456789/9',
+          link: '/handle/usach/9',
           icon: 'fas fa-shield-alt',
         },
         {
           label: 'Proyectos Externos',
-          link: '/handle/123456789/56',
+          link: '/handle/usach/56',
           icon: 'fas fa-project-diagram',
         },
         {
           label: 'Proyectos Internos',
-          link: '/handle/123456789/58',
+          link: '/handle/usach/58',
           icon: 'fas fa-project-diagram',
         },
         {
           label: 'Publicaciones',
-          link: '/handle/123456789/8',
+          link: '/handle/usach/8',
           icon: 'fas fa-book',
         },
         {
           label: 'Tesis',
-          link: '/handle/123456789/69',
+          link: '/handle/usach/69',
           icon: 'fas fa-graduation-cap',
         },
       ],

@@ -99,19 +99,19 @@ export class CountersSectionComponent implements OnInit {
         count: '0',
         label: 'publications-alt',
         icon: 'fas fa-file-alt fa-3x',
-        link: '/handle/123456789/8',
+        link: '/handle/usach/8',
       },
       {
         count: '0',
         label: 'research-data',
         icon: 'fas fa-database fa-3x',
-        link: '/handle/123456789/66',
+        link: '/handle/usach/66',
       },
       {
         count: '0',
         label: 'scientific-outreach',
         icon: 'fas fa-bullhorn fa-3x',
-        link: '/handle/123456789/51',
+        link: '/handle/usach/51',
       },
     ]);
     this.isLoading$.next(false);
