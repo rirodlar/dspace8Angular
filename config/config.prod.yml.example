@@ -1,0 +1,35 @@
+# =============================================================================
+# Plantilla del config de PRODUCCIÓN (USACH)
+# =============================================================================
+#
+# El archivo real NO se versiona (config.*.yml está en .gitignore) porque
+# contiene configuración específica del entorno (hosts/puertos, eventual info
+# sensible). Este .example sí se versiona y sirve de referencia/respaldo.
+#
+# UBICACIÓN DEL ARCHIVO REAL EN EL SERVIDOR:
+#   /opt/dspace-ui-deploy/config/config.prod.yml
+#
+# Este archivo se lee en runtime al arrancar el proceso Node de la UI, sobre
+# los defaults definidos en src/config/default-app-config.ts.
+#
+# Para aplicar cambios en config.prod.yml basta reiniciar el proceso Node
+# (no requiere rebuild de dist). Los cambios en default-app-config.ts sí
+# requieren rebuild.
+#
+# NOTA: El idioma del sitio (solo español) NO se define aquí, sino en el
+# código versionado: src/config/default-app-config.ts (languages / defaultLanguage).
+# =============================================================================
+
+# Servidor Node/Express de la UI
+ui:
+  ssl: false
+  host: localhost
+  port: 4000
+  nameSpace: /
+
+# API REST del backend DSpace
+rest:
+  ssl: true
+  host: sic.usach.cl
+  port: 443
+  nameSpace: /server
