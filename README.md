@@ -5,6 +5,8 @@ dspace-angular
 
 > The DSpace-CRIS 7 User Interface built on [Angular](https://angular.io/), written in [TypeScript](https://www.typescriptlang.org/) and using [Angular Universal](https://angular.io/guide/universal).
 
+> **USACH:** las personalizaciones propias (idioma solo español, ubicación de `config.prod.yml`, flujo de despliegue) están documentadas en [`docs/USACH-CUSTOMIZACIONES.md`](docs/USACH-CUSTOMIZACIONES.md).
+
 This project is an extension of the DSpace 7 UI. For more information on the DSpace 7 release see the [DSpace 7.0 Release Status wiki page](https://wiki.lyrasis.org/display/DSPACE/DSpace+Release+7.0+Status)
 
 You can find additional information on the DSpace 7 Angular UI on the [wiki](https://wiki.lyrasis.org/display/DSPACE/DSpace+7+-+Angular+UI+Development).
