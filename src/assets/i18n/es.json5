@@ -3187,7 +3187,7 @@
 
   // "RELATION.OrgUnit.publications.search.results.head": "Publications",
   // TODO New key - Add a translation
-  "RELATION.OrgUnit.publications.search.results.head": "Publications",
+  "RELATION.OrgUnit.publications.search.results.head": "Publicaciones",
 
   // "RELATION.OrgUnit.rpprojects.search.results.head": "Researchers Projects",
   // TODO New key - Add a translation
@@ -3199,7 +3199,7 @@
 
   // "RELATION.Project.researchoutputs.search.results.head": "Publications",
   // TODO New key - Add a translation
-  "RELATION.Project.researchoutputs.search.results.head": "Publications",
+  "RELATION.Project.researchoutputs.search.results.head": "Publicaciones",
 
   // "RELATION.OrgUnit.people.search.results.head": "People",
   // TODO New key - Add a translation
@@ -6942,7 +6942,7 @@
   "login.form.new-user": "¿Nuevo Usuario? Pulse aquí para registrarse",
 
   // "login.form.oidc": "Log in with OIDC",
-  "login.form.oidc": "Iniciar sesión con OIDC",
+  "login.form.oidc": "Iniciar sesión con USACH",
 
   // "login.form.orcid": "Log in with ORCID",
   "login.form.orcid": "Iniciar sesión con ORCID",
@@ -8472,7 +8472,7 @@
   "project-relationships.search.results.head": "Resultados de búsqueda de proyectos",
 
   // "publication.listelement.badge": "Publication",
-  "publication.listelement.badge": "Publicación",
+  "publication.listelement.badge": "Publicaciones",
 
   // "tesis.listelement.badge": "Tesis",
   "tesis.listelement.badge": "Tesis",
@@ -8496,7 +8496,7 @@
   "publication.page.publisher": "Editor",
 
   // "publication.page.titleprefix": "Publication: ",
-  "publication.page.titleprefix": "Publicación: ",
+  "publication.page.titleprefix": "Publicaciones: ",
 
   // "publication.page.volume-title": "Volume Title",
   "publication.page.volume-title": "Título del volumen",
@@ -14805,7 +14805,7 @@
   "layout.tab.header.OrgUnit.publications": "Publications",
   // "layout.tab.header.OrgUnit.rppublications": "Researchers publications",
   // TODO New key - Add a translation
-  "layout.tab.header.OrgUnit.rppublications": "Researchers publications",
+  "layout.tab.header.OrgUnit.rppublications": "Publicaciones",
   // "layout.tab.header.OrgUnit.projects": "Projects",
   // TODO New key - Add a translation
   "layout.tab.header.OrgUnit.projects": "Projects",
@@ -14854,7 +14854,7 @@
   "layout.box.header.Person.projects": "Projects",
   // "layout.box.header.Person.researchoutputs": "Publications",
   // TODO New key - Add a translation
-  "layout.box.header.Person.researchoutputs": "Publications",
+  "layout.box.header.Person.researchoutputs": "Publicaciones",
   // "layout.box.header.Person.qualifications": "Professional Qualifications",
   // TODO New key - Add a translation
   "layout.box.header.Person.qualifications": "Professional Qualifications",
@@ -14913,7 +14913,7 @@
   "layout.box.header.Project.description": "Description",
   // "layout.box.header.Project.researchoutputs": "Publications",
   // TODO New key - Add a translation
-  "layout.box.header.Project.researchoutputs": "Publications",
+  "layout.box.header.Project.researchoutputs": "Publicaciones",
   // "layout.box.header.Project.fundings": "Fundings",
   // TODO New key - Add a translation
   "layout.box.header.Project.fundings": "Fundings",
