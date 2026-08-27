@@ -2998,32 +2998,25 @@
   "context-menu.actions.claim.btn": "Claim this profile",
 
   // "context-menu.actions.export-item.btn": "Export",
-  // TODO New key - Add a translation
-  "context-menu.actions.export-item.btn": "Export",
+  "context-menu.actions.export-item.btn": "Exportar",
 
   // "context-menu.actions.label": "Options",
-  // TODO New key - Add a translation
-  "context-menu.actions.label": "Options",
+  "context-menu.actions.label": "Opciones",
 
   // "context-menu.actions.show-all-metadata": "Show all metadata (technical view)",
-  // TODO New key - Add a translation
-  "context-menu.actions.show-all-metadata": "Show all metadata (technical view)",
+  "context-menu.actions.show-all-metadata": "Ver todos los metadatos (vista técnica)",
 
   // "context-menu.actions.edit-item.btn.FULL": "Edit all the details",
-  // TODO New key - Add a translation
-  "context-menu.actions.edit-item.btn.FULL": "Edit all the details",
+  "context-menu.actions.edit-item.btn.FULL": "Editar todos los detalles",
 
   // "context-menu.actions.edit-item.btn.OWNER": "Edit",
-  // TODO New key - Add a translation
-  "context-menu.actions.edit-item.btn.OWNER": "Edit",
+  "context-menu.actions.edit-item.btn.OWNER": "Editar",
 
   // "context-menu.actions.edit-item.btn.DIRECTOR": "Edit",
-  // TODO New key - Add a translation
-  "context-menu.actions.edit-item.btn.DIRECTOR": "Edit",
+  "context-menu.actions.edit-item.btn.DIRECTOR": "Editar",
 
   // "context-menu.actions.edit-item.btn.INVESTIGATOR": "Edit",
-  // TODO New key - Add a translation
-  "context-menu.actions.edit-item.btn.INVESTIGATOR": "Edit",
+  "context-menu.actions.edit-item.btn.INVESTIGATOR": "Editar",
 
   // "context-menu.actions.request-correction.btn": "Request a correction",
   // TODO New key - Add a translation
@@ -3074,8 +3067,12 @@
   "context-menu.actions.edit-item-relationships.btn.fundings": "Manage Fundings",
 
   // "context-menu.actions.edit-item-relationships.btn.researchoutputs": "Manage Research Outputs",
-  // TODO New key - Add a translation
-  "context-menu.actions.edit-item-relationships.btn.researchoutputs": "Manage Research Outputs",
+  "context-menu.actions.edit-item-relationships.btn.researchoutputs": "Gestionar producción científica",
+
+  // USACH custom relationship boxes (backend box shortnames)
+  "context-menu.actions.edit-item-relationships.btn.researchoutputsTesis": "Gestionar Tesis",
+
+  "context-menu.actions.edit-item-relationships.btn.pproyectoExterno": "Gestionar Proyectos Externos",
 
   // "context-menu.actions.edit-item-relationships.btn.organizations": "Manage SubOrganizations",
   // TODO New key - Add a translation
@@ -3102,72 +3099,55 @@
   "context-menu.actions.edit-item-relationships.btn.projects": "Manage Projects",
 
   // "context-menu.actions.orcid-view": "Open ORCID setting page",
-  // TODO New key - Add a translation
-  "context-menu.actions.orcid-view": "Open ORCID setting page",
+  "context-menu.actions.orcid-view": "Abrir página de configuración de ORCID",
 
   // "context-menu.actions.statistics.btn": "Statistics",
-  // TODO New key - Add a translation
-  "context-menu.actions.statistics.btn": "Statistics",
+  "context-menu.actions.statistics.btn": "Estadísticas",
 
   // "context-menu.actions.subscription.title": "Subscription",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.title": "Subscription",
+  "context-menu.actions.subscription.title": "Suscripción",
 
   // "context-menu.actions.subscription.type": "Subscription Type",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.type": "Subscription Type",
+  "context-menu.actions.subscription.type": "Tipo de suscripción",
 
   // "context-menu.actions.subscription.daily": "Daily",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.daily": "Daily",
+  "context-menu.actions.subscription.daily": "Diaria",
 
   // "context-menu.actions.subscription.weekly": "Weekly",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.weekly": "Weekly",
+  "context-menu.actions.subscription.weekly": "Semanal",
 
   // "context-menu.actions.subscription.monthly": "Monthly",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.monthly": "Monthly",
+  "context-menu.actions.subscription.monthly": "Mensual",
 
   // "context-menu.actions.subscription.content": "Content",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.content": "Content",
+  "context-menu.actions.subscription.content": "Contenido",
 
   // "context-menu.actions.subscription.statistics": "Statistics",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.statistics": "Statistics",
+  "context-menu.actions.subscription.statistics": "Estadísticas",
 
   // "context-menu.actions.subscription.content+statistics": "Content & Statistics",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.content+statistics": "Content & Statistics",
+  "context-menu.actions.subscription.content+statistics": "Contenido y estadísticas",
 
   // "context-menu.actions.subscription.confirm.submit": "Save",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.confirm.submit": "Save",
+  "context-menu.actions.subscription.confirm.submit": "Guardar",
 
   // "context-menu.actions.subscription.delete": "Delete",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.delete": "Delete",
+  "context-menu.actions.subscription.delete": "Eliminar",
 
   // "context-menu.actions.subscription.frequency.required": "Frequency is required.",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.frequency.required": "Frequency is required.",
+  "context-menu.actions.subscription.frequency.required": "La frecuencia es obligatoria.",
 
   // "context-menu.actions.subscribe.btn": "Subscribe",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscribe.btn": "Subscribe",
+  "context-menu.actions.subscribe.btn": "Suscribirse",
 
   // "context-menu.actions.edit-subscriptions.btn": "Edit subscriptions",
-  // TODO New key - Add a translation
-  "context-menu.actions.edit-subscriptions.btn": "Edit subscriptions",
+  "context-menu.actions.edit-subscriptions.btn": "Editar suscripciones",
 
   // "context-menu.actions.subscription.notification.here-text": "Subscription Summary",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.notification.here-text": "Subscription Summary",
+  "context-menu.actions.subscription.notification.here-text": "Resumen de suscripciones",
 
   // "context-menu.actions.subscription.notification.content": "Subscription Updated Successfully, click {{here}} to see subscrition summary.",
-  // TODO New key - Add a translation
-  "context-menu.actions.subscription.notification.content": "Subscription Updated Successfully, click {{here}} to see subscrition summary.",
+  "context-menu.actions.subscription.notification.content": "Suscripción actualizada correctamente, haz clic en {{here}} para ver el resumen de suscripciones.",
 
   // "RELATION.Person.researchoutputs.search.results.head": "Research Outputs",
   // TODO New key - Add a translation

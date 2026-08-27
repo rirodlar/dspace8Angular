@@ -1938,6 +1938,11 @@
 
   "context-menu.actions.edit-item-relationships.btn.researchoutputs": "Manage Research Outputs",
 
+  // USACH custom relationship boxes (backend box shortnames)
+  "context-menu.actions.edit-item-relationships.btn.researchoutputsTesis": "Manage Theses",
+
+  "context-menu.actions.edit-item-relationships.btn.pproyectoExterno": "Manage External Projects",
+
   "context-menu.actions.edit-item-relationships.btn.organizations": "Manage SubOrganizations",
 
   "context-menu.actions.edit-item-relationships.btn.rppublications": "Manage Researchers Publications",
