@@ -1942,6 +1942,7 @@
   "context-menu.actions.edit-item-relationships.btn.researchoutputsTesis": "Manage Theses",
 
   "context-menu.actions.edit-item-relationships.btn.pproyectoExterno": "Manage External Projects",
+  "context-menu.actions.edit-item-relationships.btn.pproyectExterno": "Manage External Projects",
 
   "context-menu.actions.edit-item-relationships.btn.organizations": "Manage SubOrganizations",
 

@@ -3072,7 +3072,8 @@
   // USACH custom relationship boxes (backend box shortnames)
   "context-menu.actions.edit-item-relationships.btn.researchoutputsTesis": "Gestionar Tesis",
 
-  "context-menu.actions.edit-item-relationships.btn.pproyectoExterno": "Gestionar Proyectos Externos",
+  "context-menu.actions.edit-item-relationships.btn.pproyectoExterno": "Gestionar proyectos externos",
+  "context-menu.actions.edit-item-relationships.btn.pproyectExterno": "Gestionar proyectos externos",
 
   // "context-menu.actions.edit-item-relationships.btn.organizations": "Manage SubOrganizations",
   // TODO New key - Add a translation
