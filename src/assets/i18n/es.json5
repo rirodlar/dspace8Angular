@@ -2986,8 +2986,7 @@
   "context-menu.actions": "Actions",
 
   // "context-menu.actions.audit-item.btn": "Audit",
-  // TODO New key - Add a translation
-  "context-menu.actions.audit-item.btn": "Audit",
+  "context-menu.actions.audit-item.btn": "Auditar",
 
   // "context-menu.actions.bulk-import.btn": "Import items into collection",
   // TODO New key - Add a translation
@@ -3051,16 +3050,13 @@
   "context-menu.actions.request-correction.title": "Request correction",
 
   // "context-menu.actions.dso-page-edit.COMMUNITY.btn": "Administer",
-  // TODO New key - Add a translation
-  "context-menu.actions.dso-page-edit.COMMUNITY.btn": "Administer",
+  "context-menu.actions.dso-page-edit.COMMUNITY.btn": "Administrar",
 
   // "context-menu.actions.dso-page-edit.COLLECTION.btn": "Administer",
-  // TODO New key - Add a translation
-  "context-menu.actions.dso-page-edit.COLLECTION.btn": "Administer",
+  "context-menu.actions.dso-page-edit.COLLECTION.btn": "Administrar",
 
   // "context-menu.actions.dso-page-edit.ITEM.btn": "Administer",
-  // TODO New key - Add a translation
-  "context-menu.actions.dso-page-edit.ITEM.btn": "Administer",
+  "context-menu.actions.dso-page-edit.ITEM.btn": "Administrar",
 
   // "context-menu.actions.edit-item-relationships.btn.fundings": "Manage Fundings",
   // TODO New key - Add a translation
@@ -14758,17 +14754,14 @@
   // TODO New key - Add a translation
   "layout.tab.header.Person.details": "Profile",
   // "layout.tab.header.Person.publications": "Publications",
-  // TODO New key - Add a translation
-  "layout.tab.header.Person.publications": "Publications",
+  "layout.tab.header.Person.publications": "Publicaciones",
   // "layout.tab.header.Person.projects": "Projects",
   // TODO New key - Add a translation
   "layout.tab.header.Person.projects": "Projects",
   // "layout.tab.header.Person.otherinfo": "Other",
-  // TODO New key - Add a translation
-  "layout.tab.header.Person.otherinfo": "Other",
+  "layout.tab.header.Person.otherinfo": "Otros",
   // "layout.tab.header.Person.indicators": "Metrics",
-  // TODO New key - Add a translation
-  "layout.tab.header.Person.indicators": "Metrics",
+  "layout.tab.header.Person.indicators": "Métricas",
   // "layout.tab.header.Person.secure": "Secured Tab",
   // TODO New key - Add a translation
   "layout.tab.header.Person.secure": "Secured Tab",
@@ -15090,11 +15083,9 @@
   // TODO New key - Add a translation
   "layout.field.label.Person.[dc.subject]": "Research Interests",
   // "layout.field.label.Person.[person.knowsLanguage]": "Knows Language",
-  // TODO New key - Add a translation
-  "layout.field.label.Person.[person.knowsLanguage]": "Knows Language",
+  "layout.field.label.Person.[person.knowsLanguage]": "Idiomas",
   // "layout.field.label.Person.[crisrp.qualification]": "Qualification",
-  // TODO New key - Add a translation
-  "layout.field.label.Person.[crisrp.qualification]": "Qualification",
+  "layout.field.label.Person.[crisrp.qualification]": "Titulación",
   // "layout.field.label.Person.[dc.title]": "Preferred name",
   // TODO New key - Add a translation
   "layout.field.label.Person.[dc.title]": "Preferred name",
@@ -15129,11 +15120,9 @@
   // TODO New key - Add a translation
   "layout.field.label.Person.[dc.description.abstract]": "Biography",
   // "layout.field.label.Person.[oairecerif.person.affiliation]": "Affiliation",
-  // TODO New key - Add a translation
-  "layout.field.label.Person.[oairecerif.person.affiliation]": "Affiliation",
+  "layout.field.label.Person.[oairecerif.person.affiliation]": "Afiliación",
   // "layout.field.label.Person.[crisrp.education]": "Education",
-  // TODO New key - Add a translation
-  "layout.field.label.Person.[crisrp.education]": "Education",
+  "layout.field.label.Person.[crisrp.education]": "Formación académica",
   // "layout.field.label.Person.[crisrp.country]": "Country",
   // TODO New key - Add a translation
   "layout.field.label.Person.[crisrp.country]": "Country",

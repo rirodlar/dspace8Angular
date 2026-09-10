@@ -73,6 +73,11 @@ export class HeaderComponent extends BaseComponent implements OnInit {
       icon: 'fas fa-layer-group',
       subMenu: [
         {
+          label: 'Ciencia Abierta',
+          link: '/handle/usach/35915',
+          icon: 'fas fa-lock-open',
+        },
+        {
           label: 'Datos de Investigacion',
           link: '/handle/usach/66',
           icon: 'fas fa-database',
