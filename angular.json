@@ -27,7 +27,9 @@
             "allowedCommonJsDependencies": [
               "cerialize",
               "core-js",
+              "date-fns-tz",
               "file-saver",
+              "filesize",
               "html2pdf.js",
               "lodash",
               "jwt-decode",
