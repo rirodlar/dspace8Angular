@@ -4934,6 +4934,7 @@
   "info.user-guide.head": "Guía de Usuario",
   "info.user-guide.content": "Bienvenido a la Guía de Usuario del Sistema de Información Científica. Aquí encontrará instrucciones sobre cómo utilizar la plataforma.",
   "info.user-guide.breadcrumb": "Guía de Usuario",
+  "info.user-guide.breadcrumb.breadcrumbs": "Guía de Usuario",
 
   // "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
   "info.feedback.info": "Gracias por compartir sus sugerencias sobre el repositorio. ¡Tendremos en cuenta sus comentarios!",
