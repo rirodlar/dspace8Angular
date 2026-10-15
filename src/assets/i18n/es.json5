@@ -3017,6 +3017,9 @@
   // "context-menu.actions.edit-item.btn.INVESTIGATOR": "Edit",
   "context-menu.actions.edit-item.btn.INVESTIGATOR": "Editar",
 
+  // "context-menu.actions.edit-item.btn.DOI": "Request DOI",
+  "context-menu.actions.edit-item.btn.DOI": "Solicitar DOI",
+
   // "context-menu.actions.request-correction.btn": "Request a correction",
   // TODO New key - Add a translation
   "context-menu.actions.request-correction.btn": "Request a correction",
