@@ -7,7 +7,7 @@
 // del repositorio (Usach_S1.png) es turquesa y no contrasta sobre el nuevo
 // header naranjo, asi que se vuelve blanco via filtro CSS (no se reemplaza
 // el archivo de imagen). Para revertir, borrar esta regla.
-header .navbar-brand img {
+header img[src*='Usach_S1'] {
   filter: brightness(0) invert(1);
 }
 
