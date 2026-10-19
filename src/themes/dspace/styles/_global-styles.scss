@@ -40,31 +40,12 @@ header img[src*='Usach_S1'] {
   }
 }
 
-// Buscador del header siempre abierto (caja de texto visible), como en
-// usach.cl -- por defecto DSpace lo colapsa a solo el icono de lupa y lo
-// expande como dropdown flotante (position: absolute) al hacer clic.
-header .search-input {
-  display: inline-block !important;
-  position: static !important;
-  opacity: 1 !important;
-  width: 220px !important;
-  max-width: 220px !important;
-  border-radius: 999px;
-  border: none !important;
-  padding-left: 1rem !important;
-  background-color: #fff !important;
-  color: $usach-navy;
-}
-
-header .submit-icon {
-  position: static !important;
-  margin-left: 0.5rem;
-  color: #fff;
-
-  &:hover, &:focus {
-    color: #fde8de;
-  }
-}
+// Buscador del header: se vuelve a dejar dinamico (icono que se expande al
+// hacer clic, comportamiento original de DSpace) -- con el buscador siempre
+// abierto (220px) mas los 5 items de "Que es SIC?/Estadisticas/Guia de
+// Usuario/Estadisticas/Iniciar sesion" en la misma fila, no entraban
+// comodos y "Que es SIC?" se cortaba en dos lineas. El color del icono ya
+// sale blanco via $ds-header-icon-color, sin necesitar override aca.
 
 .facet-filter, .setting-option, .advanced-search {
   background-color: var(--bs-light);
