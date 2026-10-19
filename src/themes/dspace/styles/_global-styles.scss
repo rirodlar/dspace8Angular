@@ -47,13 +47,17 @@ header img[src*='Usach_S1'] {
 // comodos y "Que es SIC?" se cortaba en dos lineas. El color del icono ya
 // sale blanco via $ds-header-icon-color, sin necesitar override aca.
 //
-// El icono queda pegado justo al lado del logo, con poco espacio detras.
-// Por defecto (clase 'dropdown-menu-right' de Bootstrap) el campo se abre
-// hacia la IZQUIERDA y tapa el logo "USACH". Se fuerza a que abra hacia
-// la derecha, hacia el espacio libre del menu, en vez de hacia atras.
-header #header-left .search-input {
-  left: 0 !important;
-  right: auto !important;
+// El icono queda entre el logo y el menu "Que es SIC?...", sin espacio
+// libre de ningun lado. Por defecto el campo expandido usa
+// position: absolute y queda FLOTANDO ENCIMA de lo que tenga al lado
+// (tapaba el logo abriendo a la izquierda; tapaba "Que es SIC?" al forzarlo
+// a la derecha). El fix real: que el campo EMPUJE el contenido en vez de
+// taparlo -- position: static (fluye en el flexbox) en vez de absolute,
+// y un ancho mas chico para no desbordar la fila.
+header #header-left .search-input.display {
+  position: static !important;
+  width: 160px !important;
+  max-width: 160px !important;
 }
 
 .facet-filter, .setting-option, .advanced-search {
