@@ -46,6 +46,15 @@ header img[src*='Usach_S1'] {
 // Usuario/Estadisticas/Iniciar sesion" en la misma fila, no entraban
 // comodos y "Que es SIC?" se cortaba en dos lineas. El color del icono ya
 // sale blanco via $ds-header-icon-color, sin necesitar override aca.
+//
+// El icono queda pegado justo al lado del logo, con poco espacio detras.
+// Por defecto (clase 'dropdown-menu-right' de Bootstrap) el campo se abre
+// hacia la IZQUIERDA y tapa el logo "USACH". Se fuerza a que abra hacia
+// la derecha, hacia el espacio libre del menu, en vez de hacia atras.
+header #header-left .search-input {
+  left: 0 !important;
+  right: auto !important;
+}
 
 .facet-filter, .setting-option, .advanced-search {
   background-color: var(--bs-light);
