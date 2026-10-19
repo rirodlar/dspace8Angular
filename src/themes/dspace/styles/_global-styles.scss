@@ -16,6 +16,12 @@ header img[src*='Usach_S1'] {
 // colorea via $ds-navbar-link-color en _theme_sass_variable_overrides.scss,
 // no aca -- su componente pinta con !important y hay que ganarle a traves
 // de la variable, no con una regla CSS directa.
+//
+// Esos mismos items cortaban el texto a media frase ("Que es / SIC?") en
+// vez de respetar el ancho natural de cada palabra -- faltaba nowrap.
+#desktop-navbar .ds-menu-item {
+  white-space: nowrap;
+}
 
 // 2da fila (Inicio / Personal / Publicaciones / Colecciones): navy solido,
 // no naranjo de nuevo -- dos franjas de colores institucionales distintos
