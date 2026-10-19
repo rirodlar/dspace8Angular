@@ -12,16 +12,10 @@ header img[src*='Usach_S1'] {
   filter: brightness(0) invert(1);
 }
 
-// Menu estandar de DSpace (¿Que es SIC? / Estadisticas / Guia de Usuario),
-// en la 1ra fila (naranjo) junto al logo y el buscador. Viene cargado desde
-// el backend (ds-navbar), con su propia clase '.ds-menu-item'.
-#desktop-navbar .ds-menu-item {
-  color: #fff;
-
-  &:hover, &:focus {
-    color: #fde8de;
-  }
-}
+// Nota: el menu "Que es SIC?/Estadisticas/Guia de Usuario" (<ds-navbar>) se
+// colorea via $ds-navbar-link-color en _theme_sass_variable_overrides.scss,
+// no aca -- su componente pinta con !important y hay que ganarle a traves
+// de la variable, no con una regla CSS directa.
 
 // 2da fila (Inicio / Personal / Publicaciones / Colecciones): navy solido,
 // no naranjo de nuevo -- dos franjas de colores institucionales distintos

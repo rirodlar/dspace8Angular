@@ -99,10 +99,15 @@ $ds-header-navbar-border-bottom-color: $usach-orange;
 $ds-breadcrumb-link-color: #154E66 !default;
 $ds-breadcrumb-link-active-color: #040D11 !default;
 
-// Franja superior (logo + buscador + login): naranjo institucional, una sola
-// barra compacta -- igual de angosta que en usach.cl. La segunda barra de
-// navegacion (ds-navbar) queda SIN tocar (blanca/neutra por defecto) para
-// no repetir el bloque plano de naranjo del primer intento.
+// Fila 1 del header (logo + buscador + login + menu "Que es SIC?/
+// Estadisticas/Guia de Usuario"): naranjo institucional.
 $ds-header-bg: $usach-orange;
 $ds-header-icon-color: #fff;
 $ds-header-icon-color-hover: #fde8de;
+
+// El menu "Que es SIC?/Estadisticas/Guia de Usuario" (<ds-navbar>, dentro
+// de la fila naranja) pinta su texto con color: var(--ds-navbar-link-color)
+// !important en su propio componente -- no basta con CSS en el tema, hay
+// que sobrescribir la variable misma para que gane sobre el !important.
+$ds-navbar-link-color: #fff;
+$ds-navbar-link-color-hover: #fde8de;
