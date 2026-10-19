@@ -12,13 +12,64 @@ header img[src*='Usach_S1'] {
   filter: brightness(0) invert(1);
 }
 
-// Item activo del menu de navegacion (2da barra, debajo del header): detalle
-// naranjo en vez de pintar toda la barra, para no repetir el bloque plano
-// de color del primer intento. La barra en si queda sin fondo propio (hereda
-// blanco de la pagina) desde que se saco el style inline en header.component.html.
-#header-bottom .nav-link.active {
-  color: $usach-orange;
-  border-bottom: 2px solid $usach-orange;
+// Menu estandar de DSpace (¿Que es SIC? / Estadisticas / Guia de Usuario),
+// en la 1ra fila (naranjo) junto al logo y el buscador. Viene cargado desde
+// el backend (ds-navbar), con su propia clase '.ds-menu-item'.
+#desktop-navbar .ds-menu-item {
+  color: #fff;
+
+  &:hover, &:focus {
+    color: #fde8de;
+  }
+}
+
+// 2da fila (Inicio / Personal / Publicaciones / Colecciones): navy solido,
+// no naranjo de nuevo -- dos franjas de colores institucionales distintos
+// en vez de repetir el mismo bloque de color.
+#header-bottom {
+  background-color: $usach-navy;
+
+  .nav-link {
+    color: #fff;
+
+    &:hover, &:focus {
+      color: #cee8e8;
+    }
+
+    // Item activo: pildora naranja solida.
+    &.active {
+      background-color: $usach-orange;
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.25rem 0.9rem;
+    }
+  }
+}
+
+// Buscador del header siempre abierto (caja de texto visible), como en
+// usach.cl -- por defecto DSpace lo colapsa a solo el icono de lupa y lo
+// expande como dropdown flotante (position: absolute) al hacer clic.
+header .search-input {
+  display: inline-block !important;
+  position: static !important;
+  opacity: 1 !important;
+  width: 220px !important;
+  max-width: 220px !important;
+  border-radius: 999px;
+  border: none !important;
+  padding-left: 1rem !important;
+  background-color: #fff !important;
+  color: $usach-navy;
+}
+
+header .submit-icon {
+  position: static !important;
+  margin-left: 0.5rem;
+  color: #fff;
+
+  &:hover, &:focus {
+    color: #fde8de;
+  }
 }
 
 .facet-filter, .setting-option, .advanced-search {
