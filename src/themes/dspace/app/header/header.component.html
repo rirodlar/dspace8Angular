@@ -36,17 +36,17 @@
   </div>
 
   <!-- New centered menu below the other menu -->
-  <div id="header-bottom" class="w-100" style="background-color: #00A499;" *ngIf="(isMobile$ | async) !== true">
+  <div id="header-bottom" class="w-100" *ngIf="(isMobile$ | async) !== true">
     <div class="container px-md-5 px-4 d-flex flex-row justify-content-center py-2">
       <ul class="nav">
         <li *ngFor="let item of menuItems" class="nav-item" [ngClass]="{'dropdown': item.subMenu}">
           <ng-container *ngIf="!item.subMenu">
-            <a class="nav-link text-white font-weight-bold" [routerLink]="item.link">
+            <a class="nav-link font-weight-bold" routerLinkActive="active" [routerLink]="item.link">
               <i *ngIf="item.icon" [class]="item.icon + ' mr-1'"></i> {{item.label}}
             </a>
           </ng-container>
           <ng-container *ngIf="item.subMenu">
-            <a class="nav-link text-white font-weight-bold dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link font-weight-bold dropdown-toggle" routerLinkActive="active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i *ngIf="item.icon" [class]="item.icon + ' mr-1'"></i> {{item.label}}
             </a>
             <div class="dropdown-menu">

@@ -3,6 +3,24 @@
 // imports the base global style
 @import '../../../styles/_global-styles.scss';
 
+// TEMA USACH v2 (ver docs/USACH-CUSTOMIZACIONES.md): el logo del repositorio
+// (Usach_S1.png) es turquesa y no contrasta sobre la franja naranja del
+// header, asi que se vuelve blanco via filtro CSS (no se reemplaza el
+// archivo de imagen). Selector por nombre de archivo porque el <a> que lo
+// envuelve no tiene una clase estable (no usar '.navbar-brand').
+header img[src*='Usach_S1'] {
+  filter: brightness(0) invert(1);
+}
+
+// Item activo del menu de navegacion (2da barra, debajo del header): detalle
+// naranjo en vez de pintar toda la barra, para no repetir el bloque plano
+// de color del primer intento. La barra en si queda sin fondo propio (hereda
+// blanco de la pagina) desde que se saco el style inline en header.component.html.
+#header-bottom .nav-link.active {
+  color: $usach-orange;
+  border-bottom: 2px solid $usach-orange;
+}
+
 .facet-filter, .setting-option, .advanced-search {
   background-color: var(--bs-light);
   border-radius: var(--bs-border-radius);
