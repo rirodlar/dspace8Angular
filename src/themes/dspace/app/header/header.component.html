@@ -37,8 +37,10 @@
   </div>
 
   <!-- 2da fila: menu principal del sitio (Inicio / Personal / Publicaciones / Colecciones) -->
+  <!-- Alineado a la izquierda (justify-content-start), no centrado, para que
+       quede a plomo con el logo de la fila de arriba. -->
   <div id="header-bottom" class="w-100" *ngIf="(isMobile$ | async) !== true">
-    <div class="container px-md-5 px-4 d-flex flex-row justify-content-center py-2">
+    <div class="container px-md-5 px-4 d-flex flex-row justify-content-start py-2">
       <ul class="nav">
         <li *ngFor="let item of menuItems" class="nav-item" [ngClass]="{'dropdown': item.subMenu}">
           <ng-container *ngIf="!item.subMenu">
