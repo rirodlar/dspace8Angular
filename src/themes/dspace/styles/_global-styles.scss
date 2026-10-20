@@ -46,24 +46,35 @@ header img[src*='Usach_S1'] {
   }
 }
 
-// Buscador del header: se vuelve a dejar dinamico (icono que se expande al
-// hacer clic, comportamiento original de DSpace) -- con el buscador siempre
-// abierto (220px) mas los 5 items de "Que es SIC?/Estadisticas/Guia de
-// Usuario/Estadisticas/Iniciar sesion" en la misma fila, no entraban
-// comodos y "Que es SIC?" se cortaba en dos lineas. El color del icono ya
-// sale blanco via $ds-header-icon-color, sin necesitar override aca.
-//
-// El icono queda entre el logo y el menu "Que es SIC?...", sin espacio
-// libre de ningun lado. Por defecto el campo expandido usa
-// position: absolute y queda FLOTANDO ENCIMA de lo que tenga al lado
-// (tapaba el logo abriendo a la izquierda; tapaba "Que es SIC?" al forzarlo
-// a la derecha). El fix real: que el campo EMPUJE el contenido en vez de
-// taparlo -- position: static (fluye en el flexbox) en vez de absolute,
-// y un ancho mas chico para no desbordar la fila.
-header #header-left .search-input.display {
+// Buscador del header: siempre abierto (pill), como en usach.cl -- segundo
+// intento. La primera vez (ancho fijo + position: absolute) tapaba al logo
+// o al menu "Que es SIC?..." segun el lado hacia donde abria, porque
+// absolute flota ENCIMA del contenido vecino en vez de empujarlo.
+// Con position: static el campo fluye dentro del flexbox del header y
+// empuja al resto -- igual que el fix que ya probamos para el estado
+// expandido, solo que ahora aplica siempre (sin esperar el click), y con
+// el nowrap del menu ya no se corta "Que es SIC?" al desplazarse.
+header #header-left .search-input {
+  display: inline-block !important;
   position: static !important;
-  width: 160px !important;
-  max-width: 160px !important;
+  opacity: 1 !important;
+  width: 180px !important;
+  max-width: 180px !important;
+  border-radius: 999px;
+  border: none !important;
+  padding-left: 1rem !important;
+  background-color: #fff !important;
+  color: $usach-navy;
+}
+
+header #header-left .submit-icon {
+  position: static !important;
+  margin-left: 0.5rem;
+  color: #fff;
+
+  &:hover, &:focus {
+    color: #fde8de;
+  }
 }
 
 .facet-filter, .setting-option, .advanced-search {
