@@ -19,8 +19,14 @@ header img[src*='Usach_S1'] {
 //
 // Esos mismos items cortaban el texto a media frase ("Que es / SIC?") en
 // vez de respetar el ancho natural de cada palabra -- faltaba nowrap.
+//
+// Accesibilidad (manual, pag. 9): texto blanco sobre naranjo/turquesa solo
+// cumple la tabla de contraste si el texto es <=14pt Y esta en negrita --
+// este texto ya mide ~12pt pero venia en peso normal, asi que no cumplia.
+// Se agrega negrita para que si cumpla (no hace falta cambiar el color).
 #desktop-navbar .ds-menu-item {
   white-space: nowrap;
+  font-weight: 700;
 }
 
 // 2da fila (Inicio / Personal / Publicaciones / Colecciones): navy solido,
