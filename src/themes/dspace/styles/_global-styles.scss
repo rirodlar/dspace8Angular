@@ -83,6 +83,20 @@ header #header-left .submit-icon {
   }
 }
 
+// Fuente de titulos del manual (Bebas Neue, Expanded Bold -- usamos la
+// version gratuita de Google Fonts, no la "Pro" de pago que especifica el
+// manual). Se aplica a h1 "de pagina/estructura" (nombre de comunidad o
+// coleccion, "Resultados de la busqueda") pero NO a titulos de contenido
+// real que pueden ser frases largas: el titulo de un item/publicacion
+// (.item-page-title-field) y el aviso de la portada (.display-5) se
+// excluyen a proposito -- Bebas Neue es un display condensado en mayusculas,
+// pensado para titulos cortos, no para oraciones largas.
+h1:not(.item-page-title-field):not(.display-5) {
+  font-family: 'Bebas Neue', $font-family-sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
 .facet-filter, .setting-option, .advanced-search {
   background-color: var(--bs-light);
   border-radius: var(--bs-border-radius);
