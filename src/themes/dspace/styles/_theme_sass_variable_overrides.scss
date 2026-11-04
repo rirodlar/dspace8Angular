@@ -49,13 +49,17 @@ $font-family-sans-serif: 'Nunito Sans', -apple-system, BlinkMacSystemFont, "Sego
 // Define or override other colors here
 // ...
 
-// TEMA USACH v2: paleta tomada de usach.cl (themes/custom/usach/css/custom.css)
-// Rama tema-usach-v2. Una sola franja naranja arriba (header), navy como
-// color primario, segunda barra de navegacion neutra (no naranja completo).
-$usach-orange: #df6738; // Franja superior (logo + buscador)
-$usach-navy:   #304049; // Color primario: botones, links, texto sobre naranjo
-$usach-blue:   #2090cf; // Azul de enlaces secundario
-$usach-teal:   #00a196; // Verde-azulado del escudo/acentos
+// TEMA USACH v2: paleta oficial del Manual de Normas Graficas USACH
+// (Revision 2S-2024), no aproximada desde el CSS del sitio.
+// Colores institucionales principales:
+$usach-teal:   #00A499; // Pantone 3272 C -- color institucional principal
+$usach-orange: #E77500; // Pantone 716 C  -- franja superior (logo + buscador)
+$usach-navy:   #394049; // Pantone 432 C  -- color primario: botones, links
+// Paleta secundaria (PEI 2030), disponible si hace falta un acento mas:
+$usach-blue:   #498BCA; // Pantone 279 C "celeste"
+$usach-purple: #8C4799; // Pantone 258 C "morado"
+$usach-yellow: #EAAA00; // Pantone 124 C "amarillo"
+$usach-red:    #C8102E; // Pantone 186 C "rojo"
 
 // Override semantic colors here
 $primary:   $usach-navy;
