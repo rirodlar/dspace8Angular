@@ -60,26 +60,35 @@ header img[src*='Usach_S1'] {
 // empuja al resto -- igual que el fix que ya probamos para el estado
 // expandido, solo que ahora aplica siempre (sin esperar el click), y con
 // el nowrap del menu ya no se corta "Que es SIC?" al desplazarse.
-header #header-left .search-input {
-  display: inline-block !important;
-  position: static !important;
-  opacity: 1 !important;
-  width: 180px !important;
-  max-width: 180px !important;
-  border-radius: 999px;
-  border: none !important;
-  padding-left: 1rem !important;
-  background-color: #fff !important;
-  color: $usach-navy;
-}
+//
+// Solo desde md (768px) hacia arriba: <ds-search-navbar> no distingue
+// mobile/desktop en su propio componente, asi que forzar 180px fijo sin
+// este limite rompe el header en celulares (logo + buscador + iconos de
+// header-right + boton hamburguesa no entran en flex-nowrap sin wrap).
+// Bajo md se deja el comportamiento original del componente (icono que
+// expande al hacer foco, mas angosto).
+@include media-breakpoint-up(md) {
+  header #header-left .search-input {
+    display: inline-block !important;
+    position: static !important;
+    opacity: 1 !important;
+    width: 180px !important;
+    max-width: 180px !important;
+    border-radius: 999px;
+    border: none !important;
+    padding-left: 1rem !important;
+    background-color: #fff !important;
+    color: $usach-navy;
+  }
 
-header #header-left .submit-icon {
-  position: static !important;
-  margin-left: 0.5rem;
-  color: #fff;
+  header #header-left .submit-icon {
+    position: static !important;
+    margin-left: 0.5rem;
+    color: #fff;
 
-  &:hover, &:focus {
-    color: #fde8de;
+    &:hover, &:focus {
+      color: #fde8de;
+    }
   }
 }
 
