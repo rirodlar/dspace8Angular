@@ -52,6 +52,35 @@ header img[src*='Usach_S1'] {
   }
 }
 
+// Mismo menu que #header-bottom, pero repetido dentro del panel mobile
+// (#collapsible-mobile-navbar, fondo blanco via --ds-expandable-navbar-bg)
+// porque #header-bottom se oculta entero en mobile -- sin esto esos links
+// no eran alcanzables desde un celular.
+#mobile-site-menu {
+  .nav-link {
+    color: $usach-navy;
+    padding: 0.6rem 0.25rem;
+
+    &:hover, &:focus {
+      color: $usach-teal;
+    }
+
+    &.active {
+      background-color: $usach-orange;
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.6rem 0.9rem;
+    }
+  }
+
+  .dropdown-menu {
+    position: static !important;
+    float: none;
+    border: none;
+    padding-left: 1rem;
+  }
+}
+
 // Buscador del header: siempre abierto (pill), como en usach.cl -- segundo
 // intento. La primera vez (ancho fijo + position: absolute) tapaba al logo
 // o al menu "Que es SIC?..." segun el lado hacia donde abria, porque

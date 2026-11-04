@@ -20,16 +20,10 @@ import { ThemedNavbarComponent } from '../../../../app/navbar/themed-navbar.comp
 import { ThemedSearchNavbarComponent } from '../../../../app/search-navbar/themed-search-navbar.component';
 import { ThemedAuthNavMenuComponent } from '../../../../app/shared/auth-nav-menu/themed-auth-nav-menu.component';
 import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-navbar/impersonate-navbar.component';
-
-/**
- * Interface for menu items
- */
-interface MenuItem {
-  label: string;
-  link?: string;
-  icon?: string;
-  subMenu?: MenuItem[];
-}
+import {
+  HEADER_MENU_ITEMS,
+  MenuItem,
+} from './header-menu-items';
 
 /**
  * Represents the header with the logo and simple navigation
@@ -47,79 +41,7 @@ export class HeaderComponent extends BaseComponent implements OnInit {
   /**
    * Menu configuration array
    */
-  public menuItems: MenuItem[] = [
-    {
-      label: 'Inicio',
-      link: '/home',
-      icon: 'fas fa-home',
-    },
-    {
-      label: 'Personal de Investigación',
-      link: '/explore/researcherprofiles',
-      icon: 'fas fa-users',
-    },
-    {
-      label: 'Unidad Académica',
-      link: '/handle/usach/43',
-      icon: 'fas fa-university',
-    },
-    {
-      label: 'Publicaciones',
-      link: '/handle/usach/8',
-      icon: 'fas fa-book',
-    },
-    {
-      label: 'Colecciones',
-      icon: 'fas fa-layer-group',
-      subMenu: [
-        {
-          label: 'Ciencia Abierta',
-          link: '/handle/usach/35915',
-          icon: 'fas fa-lock-open',
-        },
-        {
-          label: 'Datos de Investigacion',
-          link: '/handle/usach/66',
-          icon: 'fas fa-database',
-        },
-        {
-          label: 'Divulgacion cientifica',
-          link: '/handle/usach/51',
-          icon: 'fas fa-bullhorn',
-        },
-        {
-          label: 'Personal de Investigacion',
-          link: '/handle/usach/3',
-          icon: 'fas fa-users',
-        },
-        {
-          label: 'Protecciones',
-          link: '/handle/usach/9',
-          icon: 'fas fa-shield-alt',
-        },
-        {
-          label: 'Proyectos Externos',
-          link: '/handle/usach/56',
-          icon: 'fas fa-project-diagram',
-        },
-        {
-          label: 'Proyectos Internos',
-          link: '/handle/usach/58',
-          icon: 'fas fa-project-diagram',
-        },
-        {
-          label: 'Publicaciones',
-          link: '/handle/usach/8',
-          icon: 'fas fa-book',
-        },
-        {
-          label: 'Tesis',
-          link: '/handle/usach/17290',
-          icon: 'fas fa-graduation-cap',
-        },
-      ],
-    },
-  ];
+  public menuItems: MenuItem[] = HEADER_MENU_ITEMS;
 
   ngOnInit() {
     super.ngOnInit();

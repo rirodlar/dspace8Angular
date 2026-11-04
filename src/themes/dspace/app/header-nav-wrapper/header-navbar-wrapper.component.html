@@ -3,6 +3,29 @@
   <!-- Collapsible navbar (mobile only) -->
   <div *ngIf="(isMobile$ | async)" id="mobile-navbar-wrapper" [@slideMobileNav]="(isNavBarCollapsed$ | async) ? 'collapsed' : 'expanded'">
     <nav class="px-3" id="collapsible-mobile-navbar" [attr.aria-hidden]="(isNavBarCollapsed$ | async)" [attr.aria-label]="'nav.main.description' | translate">
+      <!-- Menu del sitio (Inicio/Personal/Unidad Academica/Publicaciones/Colecciones):
+           en desktop vive en #header-bottom (header.component.html), que se oculta
+           en mobile -- sin esto, estos links eran inalcanzables en mobile. -->
+      <ul class="nav flex-column" id="mobile-site-menu">
+        <li *ngFor="let item of menuItems" class="nav-item" [ngClass]="{'dropdown': item.subMenu}">
+          <ng-container *ngIf="!item.subMenu">
+            <a class="nav-link font-weight-bold" routerLinkActive="active" [routerLink]="item.link">
+              <i *ngIf="item.icon" [class]="item.icon + ' mr-1'"></i> {{item.label}}
+            </a>
+          </ng-container>
+          <ng-container *ngIf="item.subMenu">
+            <a class="nav-link font-weight-bold dropdown-toggle" routerLinkActive="active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i *ngIf="item.icon" [class]="item.icon + ' mr-1'"></i> {{item.label}}
+            </a>
+            <div class="dropdown-menu">
+              <a *ngFor="let subItem of item.subMenu" class="dropdown-item" [routerLink]="subItem.link">
+                <i *ngIf="subItem.icon" [class]="subItem.icon + ' mr-1'"></i> {{subItem.label}}
+              </a>
+            </div>
+          </ng-container>
+        </li>
+      </ul>
+      <hr>
       <ds-navbar></ds-navbar>
     </nav>
   </div>
