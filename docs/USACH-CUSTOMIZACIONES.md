@@ -6,6 +6,32 @@ para no perder el rastro en futuros upgrades de DSpace.
 
 ---
 
+## Cache-Control de los CSS de tema (dspace-theme.css, custom-theme.css, base-theme.css)
+
+Estos tres archivos se generan en cada build con el **mismo nombre** (a
+diferencia de `main.<hash>.js`, que cambia de nombre cuando cambia su
+contenido). El `Cache-Control` global del servidor (`server.ts`,
+`addCacheControl`) usa `environment.cache.control` (por defecto
+`max-age=604800`, 1 semana) para todo archivo estático -- eso significa que
+el navegador de cualquier visitante que haya cargado el sitio antes de un
+deploy sigue sirviendo el CSS de tema viejo desde su caché hasta 7 días
+después, aunque el deploy haya salido perfecto. Pasó en vivo el
+2026-11-15: el cambio de paleta/tipografía no se veía pese a estar bien
+desplegado, hasta hacer un hard-reload.
+
+**Dónde se define (código versionado):** `server.ts`, función
+`addCacheControl` -- estos tres nombres de archivo (`UNHASHED_THEME_FILES`)
+se excluyen del cache largo y se sirven con `Cache-Control: no-cache`
+(el navegador revalida con ETag/Last-Modified en cada carga; sigue siendo
+barato, solo agrega un round-trip condicional, no vuelve a descargar el
+archivo completo si no cambió).
+
+**Si se agrega un nuevo tema** con su propio `*-theme.css` sin hash en el
+nombre, agregarlo a `UNHASHED_THEME_FILES` para que tenga el mismo
+comportamiento.
+
+---
+
 ## Idioma del sitio: solo español
 
 El sitio está configurado para mostrarse **solo en español**. El selector de

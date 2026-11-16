@@ -366,14 +366,26 @@ function clientSideRender(req, res) {
 }
 
 
+// TEMA USACH: los bundles de tema (dspace-theme.css, custom-theme.css,
+// base-theme.css) se sirven con el mismo nombre de archivo en cada deploy
+// (a diferencia de main.<hash>.js, que si lo cambia) -- con el cache largo
+// de abajo, el navegador de un visitante que ya paso por el sitio sigue
+// usando la version vieja hasta 7 dias despues de un cambio visual.
+const UNHASHED_THEME_FILES = ['dspace-theme.css', 'custom-theme.css', 'base-theme.css'];
+
 /*
  * Adds a Cache-Control HTTP header to the response.
  * The cache control value can be configured in the config.*.yml file
  * Defaults to max-age=604,800 seconds (1 week)
  */
 function addCacheControl(req, res, next) {
-  // instruct browser to revalidate
-  res.header('Cache-Control', environment.cache.control || 'max-age=604800');
+  const isUnhashedTheme = UNHASHED_THEME_FILES.some((name) => req.path.endsWith(name));
+  if (isUnhashedTheme) {
+    res.header('Cache-Control', 'no-cache');
+  } else {
+    // instruct browser to revalidate
+    res.header('Cache-Control', environment.cache.control || 'max-age=604800');
+  }
   next();
 }
 
