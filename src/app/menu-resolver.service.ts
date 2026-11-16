@@ -151,21 +151,6 @@ export class MenuResolverService  {
       } as LinkMenuItemModel,
     });
 
-    /* Estadísticas */
-    menuList.push({
-      id: `statistics_link`,
-      active: false,
-      visible: true,
-      index: 1,
-      model: {
-        type: MenuItemType.LINK,
-        text: `menu.section.statistics`,
-        link: `/statistics`,
-        disabled: false,
-        icon: 'fa-chart-bar',
-      } as LinkMenuItemModel,
-    });
-
     /* Guía de Usuario */
     menuList.push({
       id: `user_guide`,
