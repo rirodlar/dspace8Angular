@@ -50,22 +50,20 @@ $font-family-sans-serif: 'Nunito Sans', -apple-system, BlinkMacSystemFont, "Sego
 // ...
 
 // TEMA USACH v2: paleta oficial del Manual de Normas Graficas USACH
-// (Revision 2S-2024), no aproximada desde el CSS del sitio.
+// (Actualizacion 2026), no aproximada desde el CSS del sitio.
 // Colores institucionales principales:
-$usach-teal:   #00A499; // Pantone 3272 C -- color institucional principal
-$usach-orange: #E77500; // Pantone 716 C  -- franja superior (logo + buscador)
-$usach-navy:   #394049; // Pantone 432 C  -- color primario: botones, links
-// Paleta secundaria (PEI 2030), disponible si hace falta un acento mas:
-$usach-blue:   #498BCA; // Pantone 279 C "celeste"
+$usach-orange: #DF6738; // Pantone 7578 C "naranjo" -- franja superior (logo + buscador)
+$usach-navy:   #394049; // Pantone 432 C  "gris" -- color primario: botones, links
+// Paleta secundaria:
+$usach-cyan:   #2090CF; // Pantone 7689 C "cyan"
 $usach-purple: #8C4799; // Pantone 258 C "morado"
-$usach-yellow: #EAAA00; // Pantone 124 C "amarillo"
-$usach-red:    #C8102E; // Pantone 186 C "rojo"
+$usach-yellow: #FFCD03; // Pantone 116 C "amarillo"
 
 // Override semantic colors here
 $primary:   $usach-navy;
 $secondary: #495057;  // As Bootstrap $gray-700
 $success:   #92c642;  // Lime
-$info:      $usach-teal;
+$info:      $usach-cyan;
 $warning:   $usach-orange;
 $danger:    #cf4444;  // Red
 $light:     #f8f9fa;  // As Bootstrap $gray-100
@@ -84,7 +82,7 @@ $yiq-contrasted-threshold: 170;
 
 $body-color: #343a40;       // As Bootstrap $gray-800
 
-$link-color: $usach-blue;
+$link-color: $usach-cyan;
 $link-decoration: none;
 $link-hover-color: darken($link-color, 15%);
 $link-hover-decoration: underline;
