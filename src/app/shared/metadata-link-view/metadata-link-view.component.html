@@ -18,6 +18,7 @@
                 {{metadataView.value}}
         </span>
     </a>
+    <span *ngIf="metadataView.entityType === 'Project' && relatedItem?.handle" class="text-muted" data-test="projectHandle">({{relatedItem.handle}})</span>
   </span>
   <img *ngIf="metadataView.orcidAuthenticated"
        placement="top"
