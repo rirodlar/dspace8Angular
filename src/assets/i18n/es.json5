@@ -14632,6 +14632,8 @@
   // TODO New key - Add a translation
   "form.other-information.alternative-names": "Alternative names",
 
+  "form.other-information.handle": "Handle",
+
   // "form.other-information.selection.data-oairecerif_author_affiliation": "Select alternative affiliation",
   // TODO New key - Add a translation
   "form.other-information.selection.data-oairecerif_author_affiliation": "Select alternative affiliation",
