@@ -3989,7 +3989,7 @@
 
   // "explore.index.metric.view": "Most viewed",
   // TODO New key - Add a translation
-  "explore.index.metric.view": "Most viewed",
+  "explore.index.metric.view": "Más vistos",
 
   // "explore.index.metric.download": "Most downloaded",
   // TODO New key - Add a translation
@@ -4018,7 +4018,7 @@
 
   // "explore.index.dc.date.accessioned": "Recent Additions",
   // TODO New key - Add a translation
-  "explore.index.dc.date.accessioned": "Recent Additions",
+  "explore.index.dc.date.accessioned": "Incorporaciones recientes",
 
   // "explore.index.dc.title": "Title",
   // TODO New key - Add a translation
@@ -9146,7 +9146,7 @@
 
   // "search.filters.applied.charts.chart.bar.dateIssued.year.tab": "Date Issued",
   // TODO New key - Add a translation
-  "search.filters.applied.charts.chart.bar.dateIssued.year.tab": "Date Issued",
+  "search.filters.applied.charts.chart.bar.dateIssued.year.tab": "Fecha de publicación",
 
   // "search.filters.applied.charts.chart.pie.more-value": "More",
   // TODO New key - Add a translation
@@ -10185,7 +10185,7 @@
 
   // "statistics.table.mainReports.title.TopItems": "Most viewed",
   // TODO New key - Add a translation
-  "statistics.table.mainReports.title.TopItems": "Most viewed",
+  "statistics.table.mainReports.title.TopItems": "Más vistos",
 
   // "statistics.table.mainReports.title.TotalVisitsPerMonth": "Total visits per month",
   // TODO New key - Add a translation
@@ -10337,7 +10337,7 @@
 
   // "statistics.table.publicationsReports.title.TopItems": "Most viewed",
   // TODO New key - Add a translation
-  "statistics.table.publicationsReports.title.TopItems": "Most viewed",
+  "statistics.table.publicationsReports.title.TopItems": "Más vistos",
 
   // "statistics.table.publicationsReports.title.TopCities": "Top cities",
   // TODO New key - Add a translation
@@ -10368,7 +10368,7 @@
 
   // "statistics.table.projectsReports.title.TopItems": "Most viewed",
   // TODO New key - Add a translation
-  "statistics.table.projectsReports.title.TopItems": "Most viewed",
+  "statistics.table.projectsReports.title.TopItems": "Más vistos",
 
   // "statistics.table.projectsReports.title.TotalVisitsPerMonth": "Total visits per month",
   // TODO New key - Add a translation
@@ -10396,7 +10396,7 @@
 
   // "statistics.table.rppublicationsReports.title.TopItems": "Most viewed",
   // TODO New key - Add a translation
-  "statistics.table.rppublicationsReports.title.TopItems": "Most viewed",
+  "statistics.table.rppublicationsReports.title.TopItems": "Más vistos",
 
   // "statistics.table.rppublicationsReports.title.TopCities": "Top cities",
   // TODO New key - Add a translation
@@ -10424,7 +10424,7 @@
 
   // "statistics.table.rpprojectsReports.title.TopItems": "Most viewed",
   // TODO New key - Add a translation
-  "statistics.table.rpprojectsReports.title.TopItems": "Most viewed",
+  "statistics.table.rpprojectsReports.title.TopItems": "Más vistos",
 
   // "statistics.table.rpprojectsReports.title.TopCities": "Top cities",
   // TODO New key - Add a translation
@@ -10512,7 +10512,7 @@
 
   // "statistics.table.itemReports.title.TopItems": "Most viewed",
   // TODO New key - Add a translation
-  "statistics.table.itemReports.title.TopItems": "Most viewed",
+  "statistics.table.itemReports.title.TopItems": "Más vistos",
 
   // "statistics.table.itemReports.title.TopCategories": "Top categories",
   // TODO New key - Add a translation
@@ -15184,7 +15184,7 @@
   "layout.field.label.Event.[oairecerif.acronym]": "Acronym",
   // "layout.field.label.Event.[dc.description.abstract]": "Abstract",
   // TODO New key - Add a translation
-  "layout.field.label.Event.[dc.description.abstract]": "Abstract",
+  "layout.field.label.Event.[dc.description.abstract]": "Resumen",
   // "layout.field.label.Event.[dc.subject]": "Keywords",
   // TODO New key - Add a translation
   "layout.field.label.Event.[dc.subject]": "Keywords",
@@ -15203,7 +15203,7 @@
   "layout.field.label.Equipment.[oairecerif.internalid]": "Internal ID",
   // "layout.field.label.Equipment.[dc.title]": "Name",
   // TODO New key - Add a translation
-  "layout.field.label.Equipment.[dc.title]": "Name",
+  "layout.field.label.Equipment.[dc.title]": "Nombre",
   // "layout.field.label.Equipment.[crisequipment.ownerou]": "Owner Organisation",
   // TODO New key - Add a translation
   "layout.field.label.Equipment.[crisequipment.ownerou]": "Owner Organisation",
@@ -15216,10 +15216,10 @@
   "layout.field.label.Publication.[dc.relation.issn]": "ISSN",
   // "layout.field.label.Publication.[dc.date.issued]": "Date Issued",
   // TODO New key - Add a translation
-  "layout.field.label.Publication.[dc.date.issued]": "Date Issued",
+  "layout.field.label.Publication.[dc.date.issued]": "Fecha de publicación",
   // "layout.field.label.Publication.[dc.contributor.author]": "Author(s)",
   // TODO New key - Add a translation
-  "layout.field.label.Publication.[dc.contributor.author]": "Author(s)",
+  "layout.field.label.Publication.[dc.contributor.author]": "Autor(es)",
   // "layout.field.label.Publication.[dc.contributor.editor]": "Editor(s)",
   // TODO New key - Add a translation
   "layout.field.label.Publication.[dc.contributor.editor]": "Editor(s)",
@@ -15228,7 +15228,7 @@
   "layout.field.label.Publication.[dc.identifier.doi]": "DOI",
   // "layout.field.label.Publication.[dc.description.abstract]": "Abstract",
   // TODO New key - Add a translation
-  "layout.field.label.Publication.[dc.description.abstract]": "Abstract",
+  "layout.field.label.Publication.[dc.description.abstract]": "Resumen",
   // "layout.field.label.Publication.[dc.relation.project]": "Project(s)",
   // TODO New key - Add a translation
   "layout.field.label.Publication.[dc.relation.project]": "Project(s)",
@@ -15237,10 +15237,10 @@
   "layout.field.label.Publication.[dc.relation.funding]": "Funding(s)",
   // "layout.field.label.Publication.[dc.subject]": "Subjects",
   // TODO New key - Add a translation
-  "layout.field.label.Publication.[dc.subject]": "Subjects",
+  "layout.field.label.Publication.[dc.subject]": "Materias",
   // "layout.field.label.Publication.BITSTREAM": "File(s)",
   // TODO New key - Add a translation
-  "layout.field.label.Publication.BITSTREAM": "File(s)",
+  "layout.field.label.Publication.BITSTREAM": "Archivo(s)",
 
   // "layout.field.label.Product.[dc.title]": "Title",
   // TODO New key - Add a translation
@@ -15253,16 +15253,16 @@
   "layout.field.label.Product.[dc.relation.issn]": "ISSN",
   // "layout.field.label.Product.[dc.date.issued]": "Date Issued",
   // TODO New key - Add a translation
-  "layout.field.label.Product.[dc.date.issued]": "Date Issued",
+  "layout.field.label.Product.[dc.date.issued]": "Fecha de publicación",
   // "layout.field.label.Product.[dc.contributor.author]": "Author(s)",
   // TODO New key - Add a translation
-  "layout.field.label.Product.[dc.contributor.author]": "Author(s)",
+  "layout.field.label.Product.[dc.contributor.author]": "Autor(es)",
   // "layout.field.label.Product.[dc.identifier.doi]": "DOI",
   // TODO New key - Add a translation
   "layout.field.label.Product.[dc.identifier.doi]": "DOI",
   // "layout.field.label.Product.[dc.description.abstract]": "Abstract",
   // TODO New key - Add a translation
-  "layout.field.label.Product.[dc.description.abstract]": "Abstract",
+  "layout.field.label.Product.[dc.description.abstract]": "Resumen",
   // "layout.field.label.Product.[dc.relation.project]": "Project(s)",
   // TODO New key - Add a translation
   "layout.field.label.Product.[dc.relation.project]": "Project(s)",
@@ -15271,10 +15271,10 @@
   "layout.field.label.Product.[dc.relation.funding]": "Funding(s)",
   // "layout.field.label.Product.[dc.subject]": "Subjects",
   // TODO New key - Add a translation
-  "layout.field.label.Product.[dc.subject]": "Subjects",
+  "layout.field.label.Product.[dc.subject]": "Materias",
   // "layout.field.label.Product.BITSTREAM": "File(s)",
   // TODO New key - Add a translation
-  "layout.field.label.Product.BITSTREAM": "File(s)",
+  "layout.field.label.Product.BITSTREAM": "Archivo(s)",
 
   // "layout.field.label.Patent.[dc.title]": "Title",
   // TODO New key - Add a translation
@@ -15287,16 +15287,16 @@
   "layout.field.label.Patent.[dc.relation.issn]": "ISSN",
   // "layout.field.label.Patent.[dc.date.issued]": "Date Issued",
   // TODO New key - Add a translation
-  "layout.field.label.Patent.[dc.date.issued]": "Date Issued",
+  "layout.field.label.Patent.[dc.date.issued]": "Fecha de publicación",
   // "layout.field.label.Patent.[dc.contributor.author]": "Author(s)",
   // TODO New key - Add a translation
-  "layout.field.label.Patent.[dc.contributor.author]": "Author(s)",
+  "layout.field.label.Patent.[dc.contributor.author]": "Autor(es)",
   // "layout.field.label.Patent.[dc.identifier.patentno]": "DOI",
   // TODO New key - Add a translation
   "layout.field.label.Patent.[dc.identifier.patentno]": "DOI",
   // "layout.field.label.Patent.[dc.description.abstract]": "Abstract",
   // TODO New key - Add a translation
-  "layout.field.label.Patent.[dc.description.abstract]": "Abstract",
+  "layout.field.label.Patent.[dc.description.abstract]": "Resumen",
   // "layout.field.label.Patent.[dc.relation.project]": "Project(s)",
   // TODO New key - Add a translation
   "layout.field.label.Patent.[dc.relation.project]": "Project(s)",
@@ -15305,10 +15305,10 @@
   "layout.field.label.Patent.[dc.relation.funding]": "Funding(s)",
   // "layout.field.label.Patent.[dc.subject]": "Subjects",
   // TODO New key - Add a translation
-  "layout.field.label.Patent.[dc.subject]": "Subjects",
+  "layout.field.label.Patent.[dc.subject]": "Materias",
   // "layout.field.label.Patent.BITSTREAM": "File(s)",
   // TODO New key - Add a translation
-  "layout.field.label.Patent.BITSTREAM": "File(s)",
+  "layout.field.label.Patent.BITSTREAM": "Archivo(s)",
 
 
 
