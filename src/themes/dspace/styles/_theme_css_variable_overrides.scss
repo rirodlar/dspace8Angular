@@ -25,5 +25,10 @@
 
   --ds-item-page-img-field-default-inline-height: 24px;
   --ds-item-page-img-field-ror-inline-height: var(--ds-item-page-img-field-default-inline-height);
+
+  // Subrayado de la pestaña activa en la pagina de item (p.ej. "Details"):
+  // el valor base de DSpace-CRIS (#006666) no esta en el Canva de
+  // referencia, que pide este celeste.
+  --ds-cris-layout-navbar-tab-color-active: #56C2D0;
 }
 

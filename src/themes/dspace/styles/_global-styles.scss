@@ -134,6 +134,13 @@ h1:not(.item-page-title-field) {
   letter-spacing: 0.02em;
 }
 
+// El titulo de un item/publicacion (Nunito Sans, ver comentario arriba) usa
+// el navy institucional exacto en vez de heredar $body-color -- en el Canva
+// de referencia este texto mide #394049, no #343A40.
+.item-page-title-field {
+  color: $usach-navy;
+}
+
 .facet-filter, .setting-option, .advanced-search {
   background-color: var(--bs-light);
   border-radius: var(--bs-border-radius);
