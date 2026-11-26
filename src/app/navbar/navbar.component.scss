@@ -67,5 +67,22 @@
         color: var(--ds-navbar-link-color-hover);
       }
     }
+
+    // Items DENTRO del dropdown (ej. submenu de "Estadisticas"): el panel
+    // es blanco (--ds-navbar-dropdown-bg), no naranja como el toggle de
+    // 1er nivel -- si heredan el mismo color claro de arriba quedan
+    // invisibles (texto claro sobre fondo blanco). Misma variable oscura
+    // que ya usa el dropdown del user-menu sobre fondo blanco, mas el
+    // resaltado gris en hover del ".dropdown-item" nativo de Bootstrap,
+    // que es como luce hoy el dropdown "Colecciones" (fila navy).
+    .dropdown-menu .ds-menu-item {
+      color: var(--ds-expandable-navbar-link-color);
+      border-radius: var(--bs-border-radius, 0.25rem);
+
+      &:hover, &:focus {
+        color: var(--ds-expandable-navbar-link-color-hover);
+        background-color: var(--bs-gray-200, #e9ecef);
+      }
+    }
   }
 }
